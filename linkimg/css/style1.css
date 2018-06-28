@@ -1,0 +1,36 @@
+﻿img {
+	max-width: 500px;
+	border: 2px solid #9E1518;
+	float: left;
+	margin: 0 50px 30px 0;
+}
+p {
+	text-align: left;
+	font-size: 20px;
+	line-height: 30px;
+}
+h1 {
+	text-align: center;
+	color: #9E1518;
+	text-shadow: 0px 0px 2px gray;
+}
+h2 {
+	text-transform: uppercase;
+}
+a {
+	text-decoration: none;
+	color: gray;
+}
+a:hover {
+	text-shadow: 0px 0px 1.5px black;
+}
+b {
+	font-style: italic;
+}
+i {
+	font-weight: bold;
+	color: #DCA851
+}
+i::after {
+	content: " VNĐ"
+}

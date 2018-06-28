@@ -1,0 +1,20 @@
+img {
+	max-width: 300px;
+	border: 2px solid #9E1518;
+}
+p {
+	text-align: center;
+	font-size: 20px;
+}
+h1 {
+	text-align: center;
+	color: #9E1518;
+	text-shadow: 0px 0px 2px gray;
+}
+a {
+	text-decoration: none;
+	color: gray;
+}
+a:hover {
+	text-shadow: 0px 0px 1px black;
+}
