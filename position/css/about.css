@@ -1,0 +1,17 @@
+.about p {
+	border-left: solid 2px #222222;
+	background: #fafafa;
+	padding: 20px;
+}
+.about {
+	color: gray;
+	width: 100%;
+	box-sizing: border-box;
+}
+#ava {
+	display: block;
+	width: 250px;
+	float: right;
+	border: solid 5px #D6D6D6;
+	border-radius: 50%;
+}

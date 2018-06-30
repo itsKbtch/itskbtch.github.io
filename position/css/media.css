@@ -1,0 +1,10 @@
+.about p {
+	border-left: solid 2px #222222;
+	background: #fafafa;
+	padding: 20px;
+}
+.about {
+	color: gray;
+	width: 100%;
+	box-sizing: border-box;
+}
