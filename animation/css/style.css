@@ -1,0 +1,57 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@keyframes dance {
+	0% {top: -30px;}
+	50% {top: 0;}
+}
+@keyframes fade {
+	0% {left: -30px; opacity: 0}
+	50% {left: 0; opacity: 1}
+	100% {left: 30%; opacity: 0}
+}
+#title {
+	background: #fafafa;
+}
+#wrap {
+	max-width: 1000px;
+	margin: auto;
+	padding-left: 10px;
+}
+h1 {
+	position: relative;
+	text-align: left;
+	font-size: 90px;
+	animation: dance 2s ease;
+}
+p {
+	position: relative;
+	font-size: 27px;
+	text-align: left;
+	animation: fade 4s 2s infinite ease;
+}
+#main {
+	margin: auto;
+	max-width: 1000px;
+}
+.img {
+	float: left;
+	width: 30%;
+	height: 35vh;
+	margin: 1.666%;
+	overflow: hidden;
+	position: relative; 
+}
+img {
+	position: absolute; top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	height: 100%;
+	transition: all 0.2s ease-in-out;
+}
+img:hover {
+	height: 150%;
+	opacity: 0.8;
+}
+
