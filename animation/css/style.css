@@ -14,23 +14,37 @@
 }
 #title {
 	background: #fafafa;
+	max-width: 1000px;
+	padding: 0 30px;
+	margin: auto;
 }
 #wrap {
-	max-width: 1000px;
+	display: table;
+	width: 100%;
 	margin: auto;
-	padding-left: 10px;
 }
 h1 {
 	position: relative;
 	text-align: left;
-	font-size: 90px;
+	font-size: 80px;
 	animation: dance 2s ease;
+	float: left;
+	width: 80%;
 }
 p {
 	position: relative;
 	font-size: 27px;
-	text-align: left;
-	animation: fade 4s 2s infinite ease;
+}
+p#src {
+	float: left;
+	text-align: right;
+	width: 20%;
+	padding-top: 20px;
+	animation: dance 2s ease;
+}
+p#credit {
+	display: block;
+	animation: fade 4s infinite ease;
 }
 #main {
 	margin: auto;
