@@ -24,11 +24,11 @@
 	margin: auto;
 }
 h1 {
+	display: inline-block;
 	position: relative;
 	text-align: left;
 	font-size: 80px;
 	animation: dance 2s ease;
-	float: left;
 	width: 80%;
 }
 p {
@@ -36,14 +36,14 @@ p {
 	font-size: 27px;
 }
 p#src {
-	float: left;
+	display: inline-block;
 	text-align: right;
 	width: 20%;
 	padding-top: 20px;
 	animation: dance 2s ease;
 }
 p#credit {
-	display: block;
+	display: inline;
 	animation: fade 4s infinite ease;
 }
 #main {
