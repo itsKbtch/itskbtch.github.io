@@ -1,0 +1,264 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html, body {
+	position: fixed;
+	height: 100vh;
+	background: #fafafa;
+}
+/*
+#start {
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+*/
+.opener {
+	position: fixed;
+	z-index: -2;
+	opacity: 0;
+}
+.opener.left {
+	background: linear-gradient(90deg,#ffbb38,#fcd84a);
+	left: 0;
+	width: 50%;
+	height: 100vh;
+	animation: drape 6s ease, openerleft 2s 6s ease;
+}
+.opener.right {
+	background: linear-gradient(-90deg,#00b4ff,#59d7fe);
+	right: 0;
+	width: 50%;
+	height: 100vh;
+	animation: drape 6s ease, openerright 2s 6s ease;
+}
+.opener.text {
+	color: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 100px;
+	text-shadow: 0px 0px 2px white;
+}
+.opener.text.one {
+	animation: openertext 3s ease;
+}
+.opener.text.two {
+	animation: openertext 3s 3s ease;
+}
+#main {
+	z-index: 0;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	box-shadow: 2px 2px 4px 1px gray;
+	transition: all 0.2s ease;
+}
+.card {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	box-shadow: 2px 2px 4px 1px gray;
+}
+.card.front {
+	width: 600px;
+	height: 380px;
+	background: url(../img/front.png);
+	transition: all 0.5s ease;
+}
+h1 {
+	height: 25%;
+	padding-left: 20px;
+	padding-top: 50px;
+	border-bottom: dashed gray 1px;
+	color: #ff4a65;
+}
+#content {
+	height: 65%;
+	padding: 20px;
+	font-size: 25px;
+	color: #ff4a65;
+}
+#flip {
+	height: 10%;
+	font-size: 18px;
+	padding: 0 20px;
+	text-align: right;
+	color: gray;
+}
+.card.back {
+	width: 600px;
+	height: 380px;
+	background: #fafafa;
+	z-index: -1;
+}
+#main:hover {
+	transform: scale(1.2);
+}
+.card.front:active {
+	opacity: 0;
+}
+@keyframes openertext {
+	0% {opacity: 1; z-index: 1; font-size: 300px;}
+	50% {opacity: 1; z-index: 1; font-size: 100px;}
+	100% {opacity: 0; z-index: 1; font-size: 1px;}
+}
+@keyframes drape {
+	0% {opacity: 1; z-index: 1;}
+	100% {opacity: 1; z-index: 1;}
+}
+@keyframes openerleft {
+	0% {opacity: 1; z-index: 1; left: 0;}
+	100% {opacity: 1; z-index: 1; left: -50%;}
+}
+@keyframes openerright {
+	0% {opacity: 1; z-index: 1; right: 0;}
+	100% {opacity: 1; z-index: 1; right: -50%;}
+}
+
+/*confetti part*/
+.cannon1 {
+	background: transparent;
+	width: 20%;
+	height: 100vh;
+	z-index: 3;
+	position: fixed;
+	top:0;
+	left:0;
+}
+.cannon2 {
+	background: transparent;
+	width: 20%;
+	height: 100vh;
+	z-index: 3;
+	position: fixed;
+	top:0;
+	left: 20%;
+}
+.cannon3 {
+	background: transparent;
+	width: 20%;
+	height: 100vh;
+	z-index: 3;
+	position: fixed;
+	top:0;
+	left: 40%;
+}
+.cannon4 {
+	background: transparent;
+	width: 20%;
+	height: 100vh;
+	z-index: 3;
+	position: fixed;
+	top:0;
+	left: 60%;
+}
+.cannon5 {
+	background: transparent;
+	width: 20%;
+	height: 100vh;
+	z-index: 3;
+	position: fixed;
+	top:0;
+	left: 80%;
+}
+
+.confetti {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,0);
+	opacity: 0;
+}
+.color1 {
+	background: pink;
+	animation: shoot1 3s 8s linear;
+	width: 10px;
+	height: 13px;
+}
+.color2 {
+	background: red;
+	animation: shoot2 2s 8s linear;
+	width: 10px;
+	height: 10px;
+}
+.color3 {
+	background: yellow;
+	animation: shoot3 4s 8s linear;
+	width: 14px;
+	height: 15px;
+}
+.color4 {
+	background: green;
+	animation: shoot4 1s 8s linear;
+	width: 10px;
+	height: 12px;
+}
+.color5 {
+	background: aquamarine;
+	animation: shoot5 3s 8s linear;
+	width: 11px;
+	height: 11px;
+}
+
+@keyframes shoot1 {
+0% {left: 50%; top: 0%; opacity: 1;} 
+25% {left: 30%; top: 20%;
+	transform: rotate3d(3,49,1,20deg);}
+50% {left: 40%; top: 40%;
+	transform: rotate3d(3,4,19,180deg);}
+75% {left: 20%; top: 60%;
+	transform: rotate3d(39,4,1,200deg);}
+100% {left: 10%; top: 70%;
+	transform: rotate3d(3,4,91,360deg); opacity:0;}
+}
+@keyframes shoot2 {
+0% {left: 50%; top: 0%; opacity: 1;} 
+25% {left: 90%; top: 20%;
+	transform: rotate3d(32,49,1,22deg);}
+50% {left: 40%; top: 40%;
+	transform: rotate3d(3,42,19,132deg);}
+75% {left: 60%; top: 60%;
+	transform: rotate3d(39,4,1,240deg);}
+100% {left: 50%; top: 80%;
+	transform: rotate3d(3,42,91,360deg); opacity:0;}
+}
+@keyframes shoot3 {
+0% {left: 50%; top: 0%; opacity: 1;} 
+25% {left: 10%; top: 20%;
+	transform: rotate3d(3,4,61,90deg);}
+50% {left: 70%; top: 40%;
+	transform: rotate3d(33,4,9,120deg);}
+75% {left: 50%; top: 50%;
+	transform: rotate3d(3,4,19,300deg);}
+100% {left: 30%; top: 90%;
+	transform: rotate3d(3,4,61,260deg); opacity:0;}
+}
+@keyframes shoot4 {
+0% {left: 50%; top: 0%; opacity: 1;} 
+25% {left: 80%; top: 26%;
+	transform: rotate3d(3,4,31,97deg);}
+50% {left: 50%; top: 42%;
+	transform: rotate3d(33,3,9,170deg);}
+75% {left: 70%; top: 55%;
+	transform: rotate3d(3,4,13,307deg);}
+100% {left: 72%; top: 77%;
+	transform: rotate3d(3,4,61,270deg); opacity:0;}
+}
+@keyframes shoot5 {
+0% {left: 50%; top: 0%; opacity: 1;} 
+25% {left: 36%; top: 46%;
+	transform: rotate3d(3,4,31,195deg);}
+50% {left: 57%; top: 52%;
+	transform: rotate3d(33,3,9,130deg);}
+75% {left: 77%; top: 70%;
+	transform: rotate3d(3,4,13,207deg);}
+100% {left: 92%; top: 79%;
+	transform: rotate3d(3,4,61,310deg); opacity:0;}
+}
