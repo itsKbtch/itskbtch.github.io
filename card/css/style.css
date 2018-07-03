@@ -6,18 +6,90 @@
 html, body {
 	position: fixed;
 	height: 100vh;
-	background: #fafafa;
+	background-color: #FFFBEC;
+	background-image: url(../img/top.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-position: top;
 }
-/*
-#start {
-	position: fixed;
-	height: 100vh;
+
+
+/*Background*/
+#background {
 	width: 100vw;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	z-index: -3;
 }
-*/
+#cake {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 60%;
+	height: 100%;
+	animation: candle 0.5s ease infinite;
+}
+#decoration {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	animation: bird 3s ease infinite alternate;
+}
+#present {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	width: 40%;
+	height: 100%;
+	background: url(../img/present.png);
+	background-size: 40%;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-position: right bottom;
+}
+@keyframes bird {
+	0% {background: url(../img/decoration.png);
+	background-size: 65%;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-position: 0% 5%;}
+	100% {background: url(../img/decoration.png);
+	background-size: 65%;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-position: 100% 5%;}
+}
+@keyframes candle {
+	0% {background: url(../img/cake.png);
+	background-size: 60%;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-position: left bottom;}
+	25% {background: url(../img/cake1.png);
+	background-size: 60%;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-position: left bottom;}
+	50% {background: url(../img/cake2.png);
+	background-size: 60%;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-position: left bottom;}
+	75% {background: url(../img/cake3.png);
+	background-size: 60%;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-position: left bottom;}
+	100% {background: url(../img/cake4.png);
+	background-size: 60%;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	background-position: left bottom;}
+}
+
+/*opening*/
 .opener {
 	position: fixed;
 	z-index: -2;
@@ -57,7 +129,7 @@ html, body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	box-shadow: 2px 2px 4px 1px gray;
+	border: solid 2px #ff4a65;
 	transition: all 0.2s ease;
 }
 .card {
@@ -65,13 +137,18 @@ html, body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	box-shadow: 2px 2px 4px 1px gray;
+	border: solid 2px #ff4a65;
+	box-shadow: 2px 2px 0px 1px rgba(129, 129, 129, 0.2);
 }
 .card.front {
 	width: 600px;
 	height: 380px;
 	background: url(../img/front.png);
 	transition: all 0.5s ease;
+}
+img {
+	height: 100%;
+	width: 100%;
 }
 h1 {
 	height: 25%;
@@ -80,6 +157,27 @@ h1 {
 	border-bottom: dashed gray 1px;
 	color: #ff4a65;
 }
+b {
+	font-style: italic;
+	animation: blink 1s ease infinite;
+}
+i {
+	font-style: normal;
+	animation: blink 1s ease infinite;
+}
+#h1 {animation-delay: 0.1s;}
+#a1 {animation-delay: 0.2s;}
+#p1 {animation-delay: 0.3s;}
+#p2 {animation-delay: 0.4s;}
+#y1 {animation-delay: 0.5;}
+#b {animation-delay: 0.6s;}
+#i {animation-delay: 0.7s;}
+#r {animation-delay: 0.9s;}
+#t {animation-delay: 0.1s;}
+#h2 {animation-delay: 0.2s;}
+#d {animation-delay: 0.3s;}
+#a2 {animation-delay: 0.4s;}
+#y2 {animation-delay: 0.5s;}
 #content {
 	height: 65%;
 	padding: 20px;
@@ -121,6 +219,14 @@ h1 {
 @keyframes openerright {
 	0% {opacity: 1; z-index: 1; right: 0;}
 	100% {opacity: 1; z-index: 1; right: -50%;}
+}
+@keyframes blink {
+	0% {color: #F38120;}
+	20% {color: #54C3CE;}
+	40% {color: #C557A0;}
+	60% {color: #F7B923;}
+	80% {color: #ED1E79;}
+	100% {color: #A2CB37;}
 }
 
 /*confetti part*/
