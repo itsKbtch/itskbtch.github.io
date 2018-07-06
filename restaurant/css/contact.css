@@ -1,0 +1,36 @@
+h1 {
+	font-family: Bustamalaka;
+	font-size: 45px;
+	padding-top: 120px;
+	padding-bottom: 20px;
+	text-align: center;
+	background: #FFB74D;
+	color: white;
+}
+div {
+	background: white;
+}
+#contact {
+	display: table;
+	max-width: 1000px;
+	margin: auto;
+}
+#contact .img {
+	display: table-cell;
+	width: 40%;
+}
+#contact .info {
+	display: table-cell;
+	width: 60%;
+	vertical-align: middle;
+	font-size: 30px;
+	text-align: center;
+	font-style: italic;
+}
+.info a {
+	color: black;
+	font-weight: normal;
+}
+p {
+	margin: 30px;
+}

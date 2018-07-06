@@ -1,0 +1,39 @@
+h1 {
+	font-family: "Bustamalaka";
+	font-size: 45px;
+	padding-top: 80px;
+	padding-left: 10px;
+	text-align: left;
+	border-bottom:  solid 1px #FFB74D;
+	color: #FFB74D;
+	margin-bottom: 20px
+}
+#dish {
+	padding-bottom: 20px
+}
+.dish {
+	text-align: center;
+	font-size: 23px;
+	font-style: italic;
+	padding: 1%;
+}
+img {
+	width: 100%;
+	float: right;
+	width: 50%;
+}
+.dish p {
+	float: left;
+	width: 50%;
+	text-align: center;
+	font-size: 23px;
+	font-style: italic;
+	padding: 1%;
+}
+.content {
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}

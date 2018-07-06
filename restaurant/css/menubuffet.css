@@ -1,0 +1,41 @@
+h1 {
+	font-family: "Bustamalaka";
+	font-size: 45px;
+	padding-top: 80px;
+	padding-left: 10px;
+	text-align: left;
+	border-bottom:  solid 1px #FFB74D;
+	color: #FFB74D;
+}
+.other h1 {
+	font-family: "Bustamalaka";
+	font-size: 45px;
+	padding-top: 10px;
+	text-align: left;
+	border-bottom:  solid 1px #FFB74D;
+	color: #FFB74D;
+}
+.content ul {
+	font-family: "Bryant";
+	font-size: 20px;
+	padding: 30px;
+	list-style-position: inside;
+	display: inline-block;
+	width: 49%;
+}
+.content {
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.premium a {
+	color: #FFB74D;
+	font-style: italic;
+}
+.basic a {
+	color: gray;
+}
+a:hover {
+	color: #FF7733;
+}

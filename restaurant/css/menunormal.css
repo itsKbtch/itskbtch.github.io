@@ -1,0 +1,42 @@
+h1 {
+	font-family: "Bustamalaka";
+	font-size: 45px;
+	padding-top: 80px;
+	padding-left: 10px;
+	text-align: left;
+	border-bottom:  solid 1px #FFB74D;
+	color: #FFB74D;
+}
+#other h1 {
+	font-family: "Bustamalaka";
+	font-size: 45px;
+	padding-top: 10px;
+	text-align: left;
+	border-bottom:  solid 1px #FFB74D;
+	color: #FFB74D;
+}
+.dish {
+	float: left;
+	width: 33.33333%;
+	text-align: center;
+	font-size: 23px;
+	font-style: italic;
+	padding: 1%;
+}
+.dish img {
+	width: 100%;
+}
+.dish h2 {
+	font-family: "Bryant";
+	color: #FFA723;
+	font-size: 20px;
+}
+.content {
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+a:hover {
+	text-shadow: 0 0 0px #FF7733;
+}

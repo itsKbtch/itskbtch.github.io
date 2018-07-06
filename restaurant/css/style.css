@@ -1,0 +1,90 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: "Bryant";
+	src: url(../font/../font/../font/UTM-BryantLG.ttf)
+}
+@font-face {
+	font-family: "Bustamalaka";
+	src: url(../font/../font/../font/UTM-Bustamalaka.ttf)
+}
+body, html {
+	background: #fafafa;
+}
+#nav {
+	font-family: "Bryant";
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: white;
+	z-index: 3;
+}
+.wrap {
+	display: table;
+	max-width: 750px;
+	margin: auto;
+}	
+#logo {
+	width: 10%;
+	display: table-cell;
+	font-size: 0;
+}
+#logo img {
+	width: 100%;
+}
+ul#menu {
+	list-style-type: none;
+	display: table-cell;
+	vertical-align: middle;
+	width: 90%;
+}
+#menu li {
+	width: 16.666667%;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+}
+#menu > li > ul {
+    list-style-type: none;
+    display: none;
+}
+#menu > li:hover > ul {
+    display: block;
+	padding-bottom: 20px;
+	position: absolute;
+	background: white;
+}
+#menu > li:hover > ul > li {
+    display: block;
+	width: 100%;
+	margin-top: 30px;
+	color: #FFD992 !important;
+}
+a {
+	text-decoration: none;
+	color: #FFA723;
+	font-weight: bold;
+}
+a:hover {
+	color: #FF7733;
+}
+#footer {
+	width: 100%;
+	height: 100px;
+	background: white;
+	text-align: center;
+}
+#footer p {
+	padding-top: 20px;
+}
+#footer a {
+	color: black;
+	font-weight: normal;
+}
+i {
+	color: #FFA723; 
+}

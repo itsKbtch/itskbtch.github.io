@@ -1,0 +1,24 @@
+h1 {
+	font-family: "Bustamalaka";
+	font-size: 45px;
+	padding-top: 50%;
+	text-align: center;
+	color: white;
+}
+#normal, #buffet {
+	float: left;
+	width: 50%;
+	height: 100vh;
+}
+#normal {
+	background: linear-gradient(#FFB74D,#ff791e);
+}	
+#buffet { 
+	background: linear-gradient(#FFB74D,#fe9321);
+}
+#normal:hover {
+	background: radial-gradient(#FFB74D,#ff791e);
+}
+#buffet:hover {
+	background: radial-gradient(#FFB74D,#fe9321);
+}

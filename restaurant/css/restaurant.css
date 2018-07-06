@@ -1,0 +1,28 @@
+h1 {
+	font-family: Bustamalaka;
+	font-size: 45px;
+	padding-top: 120px;
+	padding-bottom: 20px;
+	text-align: center;
+	background: #FFB74D;
+	color: white;
+}
+h2 {
+	font-family: Bustamalaka;
+	font-size: 45px;
+	color: #FFB74D;
+	border-bottom: solid 1px #FFB74D;
+	padding-left: 10px
+}
+.content p {
+	font-size: 20px;
+	font-style: italic;
+	padding: 50px;
+	color: #FF7733;
+}
+.content {
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

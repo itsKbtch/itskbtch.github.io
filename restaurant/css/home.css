@@ -1,0 +1,70 @@
+#discount {
+	font-size: 0;
+}
+.ad {
+	width: 33.33333%;
+	float: left;
+	overflow: hidden;
+}
+.ad img {
+	width: 100%;
+	transition: all 0.5s ease;
+}
+.ad img:hover {
+	transform: scale(1.1);
+	opacity: 0.8;
+}
+#discount h1 {
+	font-size: 45px;
+	padding-top: 120px;
+	padding-bottom: 20px;
+	text-align: center;
+	background: #FFB74D;
+	color: white;
+}
+h1 {
+	font-family: "Bustamalaka";
+	font-size: 45px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+	background: #FFB74D;
+	color: white;
+}
+#about img {
+	float: right;
+	width: 30%;
+}
+#about p {
+	float: left;
+	width: 70%;
+	text-align: center;
+	font-size: 23px;
+	font-style: italic;
+	padding: 10%;
+	color: #FF7733;
+}
+#special img {
+	float: right;
+	width: 40%;
+}
+.dish {
+	float: left;
+	width: 60%;
+	text-align: center;
+	font-size: 23px;
+	font-style: italic;
+	padding: 6%;
+	color: gray;
+}
+.dish h2 {
+	font-family: "Bustamalaka";
+	color: #FF7733;
+	font-size: 40px;
+}
+.content {
+	max-width: 1000px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
