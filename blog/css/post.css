@@ -1,0 +1,56 @@
+article {
+	border-left: solid 2px #222222;
+	background: #fafafa;
+	padding: 20px;
+	color: gray;
+	width: 70%;
+	box-sizing: border-box;
+	float: left;
+}
+article img {
+	width: 90%;
+	margin-left: 5%;
+	border-right: solid 2px #222222;
+}
+article h2 {
+	color: black;
+}
+#other {
+	float: left;
+	width: 30%;
+	padding: 20px;
+}
+article footer {
+	text-align: right;
+	height: auto;
+	padding-top: 20px;
+}
+aside ul {
+	list-style-position: inside
+}
+h2 {
+	padding-bottom: 20px;
+}
+p {
+	margin-top: 20px;
+}
+.content {
+	border-left: solid 2px #717171;
+	padding-left: 20px;
+	margin-left: 10px
+}
+.quote {
+	background: white;
+	font-style: italic;
+	padding: 5px;
+}
+.content img {
+	float: right;
+	width: 50%;
+	margin: 5px;
+}
+#post ul {
+	list-style-position: inside;
+	font-size: 30px;
+	padding-left: 30px;
+}
