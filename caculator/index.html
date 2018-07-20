@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+<div id="cal">
+	<div id="top">
+		<h1>Calculator</h1>
+	</div>
+	<div id="screen">
+   		<input type="text" id="screen1" disabled>
+   		<input type="text" id="screen2" disabled>
+    </div>
+ 	<div id="key">
+ 	<div id="wrap">
+ 		<div id="function">
+ 			<button onclick="fact()">x!</button>
+ 			<button onclick="pow(2)">x&sup2;</button>
+ 			<button onclick="pow(3)">x&sup3;</button>
+ 			<button onclick="exp()">e<sup>x</sup></button>
+ 			<button onclick="log()">ln</button>
+ 			<button onclick="sqrt()">&radic;</button>
+ 			<button onclick="percent()">%</button>
+ 			<button onclick="sin()">sin</button>
+ 			<button onclick="cos()">cos</button>
+ 			<button onclick="tan()">tan</button>
+ 		</div>
+  		<div id="number">
+			<button onclick="input(this);">1</button>
+			<button onclick="input(this);">2</button>
+			<button onclick="input(this);">3</button>
+			<button onclick="input(this);">4</button>
+			<button onclick="input(this);">5</button>
+			<button onclick="input(this);">6</button>
+			<button onclick="input(this);">7</button>
+			<button onclick="input(this);">8</button>
+			<button onclick="input(this);">9</button>
+  			<button onclick="input(this);">0</button>
+  			<button onclick="inputC(this);">.</button>
+   			<button onclick="inputPi();">&pi;</button>
+   		</div>
+   		<div id="operator">
+   			<button onclick="del()">CE</button>
+   			<button onclick="delA()">C</button>
+   			<button onclick="backSpace()">&#8678;</button>
+			<button onclick="cal(this);">+</button>
+			<button onclick="calMinus(this);">-</button>
+			<button onclick="cal(this);">x</button>
+			<button onclick="cal(this);">÷</button>
+  			<button onclick="equal();">=</button>
+   		</div>
+   		<script src="js/js.js"></script>
+   		<div style="clear: both"></div>
+    </div>
+    </div>
+</div>
+</body>
+</html>
