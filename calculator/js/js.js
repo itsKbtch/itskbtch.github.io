@@ -100,10 +100,13 @@
 				ans=true;}
 			}
 			function sqrt() {
-				if (Number.isInteger(Number(document.getElementById("screen2").value)) && Number(document.getElementById("screen2").value) >= 0 && document.getElementById("screen2").value != "") {
+				if (document.getElementById("screen2").value != "") {
+				if (Number.isInteger(Number(document.getElementById("screen2").value)) && Number(document.getElementById("screen2").value) >= 0) {
 				document.getElementById("screen2").value = Math.sqrt(Number(document.getElementById("screen2").value));
 				ans=true;
-				}
+				} else {
+					alert("Math Error");
+				}}
 			}
 			function percent() {
 				if (document.getElementById("screen2").value != "") {
