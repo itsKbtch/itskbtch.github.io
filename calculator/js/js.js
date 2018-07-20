@@ -49,9 +49,13 @@
 				}
 			}
 			function calMinus(a) {
-				if(document.getElementById("screen2").value != "" && document.getElementById("screen2").value.startsWith("-") == false){
-					document.getElementById("screen2").value = "-" + document.getElementById("screen2").value;
+				if(document.getElementById("screen2").value != ""){
+					if (document.getElementById("screen2").value.startsWith("-") == false) {
+						document.getElementById("screen2").value = "-" + document.getElementById("screen2").value;
+					} else {
+						document.getElementById("screen2").value = document.getElementById("screen2").value.slice(1);
 					}
+				}
 			}
 			var ans;
 			function equal() {
