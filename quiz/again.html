@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Let's take a quiz</title>
+	<link rel="stylesheet" type="text/css" href="css/again.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+</head>
+
+<body>
+	<div id="content">
+		<p id="score"></p>
+		<p id="scoreafter"></p>
+		<p id="again"><a href="index.html"><i class="fas fa-redo-alt"></i></a><br>Take the quiz again</p>
+	</div>
+	<script>
+	document.getElementById("score").innerText = sessionStorage.score;
+	document.getElementById("scoreafter").innerText = sessionStorage.score;
+	</script>
+</body>
+</html>
