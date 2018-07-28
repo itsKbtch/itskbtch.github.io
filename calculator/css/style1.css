@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+	box-sizing: border-box;
+}
+body {
+	background: radial-gradient(ellipse at center, rgba(228,239,192,1) 0%,rgba(171,189,115,1) 100%);
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100vh;
+}
+#cal {
+	max-width: 500px;
+	width: 100%;
+	max-height: 650px;
+	height: 100%;
+	background: rgba(247,178,59,1);
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border: solid 4px rgba(231,149,9,1.00);
+	border-top: solid 4px rgba(249,196,101,1.00);
+	border-left: solid 4px rgba(249,196,101,1.00);
+	border-radius: 20px;
+}
+#top {
+	height: 10%;
+}
+#screen {
+	width: 94%;
+	height: 20%;
+	background: white;
+	padding: 3%;
+	border-radius: 20px;
+	margin: auto;
+	border: solid 4px rgba(249,196,101,1.00);
+	border-top: solid 4px rgba(231,149,9,1.00);
+	border-left: solid 4px rgba(231,149,9,1.00);
+	box-shadow: inset 1px 2px 1px 2px rgba(0,0,0,0.1);
+}
+#key {
+	width: 100%;
+	height: 70%;
+	padding: 3%;
+}
+h1 {
+	padding: 20px;
+	font-weight: normal;
+	color: white;
+}
+#wrap {
+	height: 100%;
+}
+#function {
+	height: 30%;
+	width: 100%;
+	float: left;
+}
+#number {
+	height: 70%;
+	width: 60%;
+	float: left;
+}
+#operator {
+	width: 40%;
+	height: 70%;
+	float: left;
+}
+#function button {
+	width: 19%;
+	height: 40%;
+	float: left;
+	margin: 0.5%;
+}
+#number button {
+	width: 31.666667%;
+	height: 21%;
+	float: left;
+	margin: 0.83333%;
+}
+#operator button {
+	width: 47.5%;
+	height: 21%;
+	float: left;
+	margin: 1.25%;
+}
+button {
+	font-size: 18px;
+	border: none;
+	background: white;
+	border-radius: 10px;
+	border-bottom: solid 3px gray;
+}
+button:hover {
+	cursor: pointer
+}
+button:active {
+	border-top: solid 1px rgba(247,178,59,1.00);
+	border-bottom: solid 2px gray;
+}
+input {
+	width: 100%;
+	height: 50%;
+	background: transparent;
+	border: none;
+	text-align: right;
+	color: black;
+	padding: 3%;
+}
+#screen2 {
+	font-size: 30px;
+}
+#theme {
+	position: absolute;
+	bottom: 5px;
+	right: 3%;
+}
+#theme button {
+	font-size: 15px;
+	padding: 5px;
+}
