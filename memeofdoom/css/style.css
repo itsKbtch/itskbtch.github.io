@@ -8,7 +8,7 @@ body {
 	background-size: cover;
 }
 .wrap {
-	max-width: 1150px;
+	max-width: 1050px;
 	margin: auto;
 }
 .card {
@@ -230,8 +230,8 @@ body {
 	background: #e1d95d;
 	z-index: 8;
 	display: flex;
-  align-items: center;
-  justify-content: center;
+  	align-items: center;
+  	justify-content: center;
 }
 #load img {
 	width: 100px;
@@ -241,6 +241,12 @@ body {
 	0% {transform: rotate(0deg)}
 	100% {transform: rotate(360deg)}
 }
-.loaded {
-	display: none !important;
+#load.loaded {
+	animation: slide 1.7s ease;
+  	z-index: -5;
+  	opacity: 0;
+}
+@keyframes slide {
+	0% {left: 0; opacity: 1; z-index: 8;}
+	100% {left: -100%; opacity: 1; z-index: 8;}
 }
