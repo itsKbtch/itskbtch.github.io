@@ -1,0 +1,246 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	background: url(../img/background.jpg);
+	background-size: cover;
+}
+.wrap {
+	max-width: 1050px;
+	margin: auto;
+}
+.card {
+	position: relative;
+	cursor: pointer;
+	transition: all 0.5s ease;
+	font-size: 0;
+	margin: 10px 0;
+}
+.card:hover {
+	transform: scale(1.1);
+	z-index: 2;
+}
+.card .back {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.card .front {
+	transform: rotateY(180deg);
+}
+.card.clicked .back {
+	transform: rotateY(180deg);
+	box-shadow: 0 0 2px 2px white;
+}
+.card.clicked .front {
+	transform: rotateY(0deg);
+	box-shadow: 0 0 2px 2px white;
+}
+.card .front, .card .back {
+	transition: all 0.5s ease;
+	backface-visibility: hidden;
+}
+.grid {
+	display: grid;
+	grid-template-columns: 14% 14% 14% 14% 14% 14%;
+	grid-gap: 3.2%;
+}
+.grid img {
+	width: 100%;
+	border: solid 2px white;
+}
+.progress {
+	width: 100%;
+	height: 20px;
+	background: white;
+	margin: 20px 0;
+}
+.bar {
+	width: 100%;
+	background: #ca0202;
+	height: 100%;
+	position: relative;
+	transition: all 0.5s;
+}
+.bar img {
+	position: absolute;
+	right: -32px;
+	top: -23px;
+	width: 69px;
+	animation: head 1s linear infinite;
+}
+@keyframes head {
+	0% {transform: rotate(-10deg)}
+	50% {transform: rotate(10deg)}
+	100% {transform: rotate(-10deg)}
+}
+#opening {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+	z-index: 5;
+}
+.start {
+	position: fixed;
+	background: #e1d95d;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border: solid 10px #b266a4;
+	padding: 20px;
+	width: 100%;
+	max-width: 500px;
+}
+.contain {
+	position: relative;
+	width: 80%;
+}
+.contain img {
+	position: absolute;
+	right: -65%;
+	top: -60%;
+	width: 250px
+}
+.contain h1 {
+	color: white;
+	text-transform: uppercase;
+	background: #219787;
+	padding: 10px;
+}
+.contain div {
+	background: white;
+	font-size: 20px;
+	margin: 5px 0;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+.contain div:hover {
+	box-shadow: 0 0 1px 1px gray;
+}
+.hard {
+	background: pink !important;
+}
+.doom {
+	background: #ca0202 !important;
+}
+#end {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+	z-index: 5;
+}
+.lose {
+	position: fixed;
+	background: #e1d95d;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	color: #ca0202;
+	border-radius: 50%;
+	animation: appear 1s;
+}
+.lose h1 {
+	position: fixed;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 1.7em;
+}
+.win {
+	position: fixed;
+	background: #b266a4;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	color: white;
+	animation: appear 1s;
+}
+@keyframes appear {
+	0% {opacity: 0}
+	100% {opacity: 1}
+}
+#end h2 {
+	background: #219787; 
+	width: 200px;
+	position: fixed;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, 10px);
+	cursor: pointer;
+	color: white;
+	transition: all 0.5s;
+}
+#end h2:hover {
+	box-shadow: 0 0 1px 1px white;
+}
+#ready {
+	display: none;
+}
+.active#ready {
+	display: block;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+	z-index: 5;
+}
+.active .number, .active .meme {
+	font-size: 100px;
+	color: white;
+	font-weight: bold;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+.active .number.three {
+	animation: countdown 1s ease;
+}
+.active .number.two {
+	animation: countdown 1s 1s ease;
+}
+.active .number.one {
+	animation: countdown 1s 2s ease;
+}
+.active .meme {
+	animation: countdown 1s 3s ease;
+}
+@keyframes countdown {
+	0% {opacity: 1; font-size: 300px;}
+	50% {opacity: 1; font-size: 100px;}
+	100% {opacity: 0; font-size: 1px;}
+}
+#load {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: #e1d95d;
+	z-index: 8;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#load img {
+	width: 100px;
+	animation: load 2s linear infinite;
+}
+@keyframes load {
+	0% {transform: rotate(0deg)}
+	100% {transform: rotate(360deg)}
+}
+.loaded {
+	display: none !important;
+}
