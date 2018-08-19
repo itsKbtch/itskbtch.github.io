@@ -21,11 +21,15 @@
 <script>
 	window.addEventListener ("load", function() {
 		function find(value) {
-    		var find= document.URL.substr(document.URL.search(value));
-			find= find.slice(find.search('=')+1);
-			if (find.search('&')>=0){
-			find= find.substring(0, find.search('&'));}
-    		return decodeURIComponent(find).replace(/\+/g, ' ');
+			if (document.URL.search(value)>=0) {
+				var find= document.URL.slice(document.URL.search(value));
+				find= find.slice(find.search('=')+1);
+				if (find.search('&')>=0){
+				find= find.substring(0, find.search('&'));}
+				return decodeURIComponent(find).replace(/\+/g, ' ');
+			} else {
+				return "";
+			}
 		}
 		var name= find('first_name') + ' ' + find('last_name');
 		var birth= find('birthday');
