@@ -1,0 +1,40 @@
+* {
+	box-sizing: border-box;
+	font-family: Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+}
+body {
+	background: #fafafa;
+}
+div {
+	margin: auto;
+	width: 490px;
+	padding: 20px;
+	background: rgba(228,239,192,1);
+	border-radius: 20px;
+	color: white;
+}
+h1 {
+	text-align: center;
+	margin: 50px 0 20px 0;
+	color: rgba(171,189,115,1);
+}
+h2 {
+	text-align: center;
+	font-size: 35px;
+	margin: 0px 0 20px 0;
+}
+p {
+	padding: 10px 20px;
+	margin: 0 0 20px 0;
+	border: none;
+	background: rgba(171,189,115,1);
+	color: white;
+	border-radius: 20px;
+}
+input#password {
+	background: transparent;
+	border: none;
+	margin: 0 5px;
+	color: white;
+}
+

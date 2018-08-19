@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Register - Succeed</title>
+<link rel="stylesheet" type="text/css" href="css/succeed.css">
+</head>
+
+<body>
+<h1>ĐĂNG KÍ</h1>
+<div>
+	<h2>Đăng kí thành công</h2>
+	<p id="name"><b>Họ tên:</b></p>
+	<p id="birth"><b>Ngày sinh:</b></p>
+	<p id="gender"><b>Giới tính:</b></p>
+	<p id="address"><b>Địa chỉ:</b></p>
+	<p id="email"><b>Email:</b></p>
+	<p id="phone"><b>SĐT:</b></p>
+	<p><b>Mật khẩu:</b><input type="password" id="password" disabled></p>
+</div>
+<script>
+	window.addEventListener ("load", function() {
+		function find(value) {
+    		var find= document.URL.substr(document.URL.search(value));
+			find= find.slice(find.search('=')+1);
+			if (find.search('&')>=0){
+			find= find.substring(0, find.search('&'));}
+    		return decodeURIComponent(find).replace(/\+/g, ' ');
+		}
+		var name= find('first_name') + ' ' + find('last_name');
+		var birth= find('birthday');
+		var gender= find('gender');
+		var address= find('address');
+		var email= find('email');
+		var phone= find('phone');
+		var password= find('password');
+		document.getElementById('name').innerHTML += ' ' + name;
+		document.getElementById('gender').innerHTML += ' ' + gender;
+		document.getElementById('address').innerHTML += ' ' + address;
+		document.getElementById('email').innerHTML += ' ' + email;
+		document.getElementById('phone').innerHTML += ' ' + phone;
+		document.getElementById('password').value += password;
+		document.getElementById('birth').innerHTML += ' ' + birth;
+	})
+	
+</script>
+</body>
+</html>
