@@ -16,7 +16,7 @@
 			$('#last_name').css('background', 'rgba(228,239,192,1)');
 			lastNameValid= false;
 		} else {
-			$('.error.first_name').text('');
+			$('.error.last_name').text('');
 			$('#last_name').css('background', 'white');
 			lastNameValid= true;
 		}
