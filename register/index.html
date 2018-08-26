@@ -9,19 +9,60 @@
 <body>
 <h1>ĐĂNG KÍ</h1>
 <form action="succeed.html">
+	<div class="field first_name">
 	<input type="text" name="first_name" placeholder="Tên" id="first_name">
+	<div class="error first_name"></div>
+	</div>
+	
+	<div class="field last_name">
 	<input type="text" name="last_name" placeholder="Họ" id="last_name">
-	<br>
+	<div class="error last_name"></div>
+	</div>
+	
+	<div class="double">
+	<div class="field birthday">
 	<label for="birthday">Ngày sinh:</label>
-	<input type="date" name="birthday" id="birthday" id="birthday">
-	<input type="radio" name="gender" id="male" value="male"><label for="male"> Nam</label>
-	<input type="radio" name="gender" id="female" value="female"><label for="female"> Nữ</label>
-	<br>
-	<input type="text" name="address" placeholder="Địa chỉ" id="address"><br>
-	<input type="text" name="email" placeholder="Email" id="email"><br>
-	<input type="text" name="phone" placeholder="Số điện thoại" id="phone"><br>
+	<input type="date" name="birthday" id="birthday">
+	<div class="error birthday"></div>
+	</div>
+	
+	<div class="field gender">
+	<input type="radio" name="gender" id="male" value="male">
+	<label for="male"> Nam</label>
+	<input type="radio" name="gender" id="female" value="female">
+	<label for="female"> Nữ</label>
+	<div class="error gender"></div>
+	</div>
+	</div>
+	
+	<div class="field address">
+	<input type="text" name="address" placeholder="Địa chỉ" id="address">
+	<div class="error address"></div>
+	</div>
+	
+	<div class="field email">
+	<input type="text" name="email" placeholder="Email" id="email">
+	<div class="error email"></div>
+	</div>
+	
+	<div class="field phone">
+	<input type="text" name="phone" placeholder="Số điện thoại" id="phone">
+	<div class="error phone"></div>
+	</div>
+	
+	<div class="field facebook">
+	<input type="text" name="facebook" placeholder="Địa chỉ Facebook" id="facebook">
+	<div class="error facebook"></div>
+	</div>
+	
+	<div class="field password">
 	<input type="password" name="password" placeholder="Mật khẩu" id="password">
+	<div class="error password"></div>
+	</div>
+	
 	<input type="submit" value="Đăng kí" id="submit">
 </form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/js.js"></script>
 </body>
 </html>

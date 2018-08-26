@@ -9,7 +9,7 @@ div {
 	margin: auto;
 	width: 490px;
 	padding: 20px;
-	background: rgba(228,239,192,1);
+	background: rgba(171,189,115,1);
 	border-radius: 20px;
 	color: white;
 }
@@ -27,14 +27,15 @@ p {
 	padding: 10px 20px;
 	margin: 0 0 20px 0;
 	border: none;
-	background: rgba(171,189,115,1);
-	color: white;
+	background: white;
+	color: black;
 	border-radius: 20px;
+	font-size: 14px;
 }
 input#password {
 	background: transparent;
 	border: none;
 	margin: 0 5px;
-	color: white;
+	color: black;
 }
 

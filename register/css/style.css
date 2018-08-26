@@ -9,9 +9,12 @@ form {
 	margin: auto;
 	width: 490px;
 	padding: 20px 15px;
-	background: rgba(228,239,192,1);
+	background: rgba(171,189,115,1);
 	border-radius: 20px;
 	color: white;
+	display: grid;
+	grid-template-columns: 49% 49%;
+	grid-gap: 2%;
 }
 h1 {
 	text-align: center;
@@ -22,36 +25,88 @@ input {
 	padding: 15px;
 	margin: 0 0 20px 0;
 	border: none;
-	background: rgba(171,189,115,1);
-	color: white;
+	background: white;
+	color: black;
 	border-radius: 20px;
 }
 input::placeholder {
-	color: white;
+	color: black;
 }
 input::-ms-input-placeholder {
-	color: white;
+	color: black;
+}
+.field input:focus {
+	box-shadow: inset 0 0 0px 3px rgba(228,239,192,1);
 }
 label {
 	font-weight: bold;
 }
-#first_name, #last_name {
-	width: 49.4%;
+.field.gender {	
+	align-self: center;
+	justify-self: center;
 }
-#male, #female {
-	margin: 0 0 0 10px;
-}
-#birthday {
-	margin-left: 10px;
-	margin-right: 10px;
-}
-#address, #email, #phone, #password {
+#first_name, #last_name, #address, #email, #phone, #password, #facebook {
 	width: 100%;
 }
+#female, #birthday {
+	margin-left: 10px;
+}
+.double {
+	display: grid;
+	grid-template-columns: 59% 39%;
+	grid-gap: 2%;
+}
+.field.address, .field.email, .field.phone, .field.password, .double, .field.facebook {
+	grid-column: span 2;
+}
 #submit {
-	border: solid 3px #fafafa;
+	border: solid 3px rgba(228,239,192,1);
 	display: block;
 	margin: auto;
 	width: 100px;
 	cursor: pointer;
+	grid-column: span 2;
+}
+.field {
+	position: relative;
+}
+.error {
+	position: absolute;
+	background: white;
+	border: solid 2px rgba(247,178,59,1);
+	border-radius: 10px;
+	width: 100%;
+	top: 80%;
+	z-index: 5;
+	color: rgba(247,178,59,1);
+	padding: 8px;
+	font-size: 14px;
+	display: none;
+}
+.error:after {
+	content: '';
+	position: absolute;
+	top: -8px;
+	left: 15px;
+	width: 0;
+	height: 0;
+	border: 8px solid transparent;
+	border-bottom-color: rgba(247,178,59,1);
+	border-top: 0;
+}
+.error.gender {
+	left: 130%;
+    top: -10px;
+	z-index: 3;
+}
+.error.gender:after {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: -8px;
+	width: 0;
+	height: 0;
+	border: 8px solid transparent;
+	border-right-color: rgba(249,196,101,1.00);
+	border-left: 0;
 }

@@ -16,6 +16,7 @@
 	<p id="address"><b>Địa chỉ:</b></p>
 	<p id="email"><b>Email:</b></p>
 	<p id="phone"><b>SĐT:</b></p>
+	<p id="facebook"><b>Facebook:</b></p>
 	<p><b>Mật khẩu:</b><input type="password" id="password" disabled></p>
 </div>
 <script>
@@ -38,6 +39,7 @@
 		var email= find('email');
 		var phone= find('phone');
 		var password= find('password');
+		var facebook= find('facebook');
 		document.getElementById('name').innerHTML += ' ' + name;
 		document.getElementById('gender').innerHTML += ' ' + gender;
 		document.getElementById('address').innerHTML += ' ' + address;
@@ -45,6 +47,7 @@
 		document.getElementById('phone').innerHTML += ' ' + phone;
 		document.getElementById('password').value += password;
 		document.getElementById('birth').innerHTML += ' ' + birth;
+		document.getElementById('facebook').innerHTML += ' ' + facebook;
 	})
 	
 </script>
