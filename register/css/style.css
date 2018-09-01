@@ -110,3 +110,12 @@ label {
 	border-right-color: rgba(249,196,101,1.00);
 	border-left: 0;
 }
+.invalid {
+	background: rgba(228,239,192,1);
+	animation: blink 0.5s linear;
+}
+@keyframes blink {
+	0% {background: rgba(228,239,192,1);}
+	50% {background: white;}
+	100% {bbackground: rgba(228,239,192,1);}
+}
