@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Top 10 highest-grossing tours of all time</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+<h1>Top 10 highest-grossing tours of all time</h1>
+<table>
+	<thead>
+		<tr>
+			<th onclick="sortNumberth(1, $(this))" order="0">Rank<span class="order"><span class="ascend">&#9650;</span><span class="descend">&#9660;</span></span></th>
+			<th onclick="sortNumber(2, $(this))" order="0">Actual gross<span class="order"><span class="ascend">&#9650;</span><span class="descend">&#9660;</span></span></th>
+			<th onclick="sortNumber(3, $(this))" order="0">Gross adjusted for inflation<span class="order"><span class="ascend">&#9650;</span><span class="descend">&#9660;</span></span></th>
+			<th onclick="sort(4, $(this))" order="0">Artist<span class="order"><span class="ascend">&#9650;</span><span class="descend">&#9660;</span></span></th>
+			<th onclick="sort(5, $(this))" order="0">Tour name<span class="order"><span class="ascend">&#9650;</span><span class="descend">&#9660;</span></span></th>
+			<th onclick="sortYear(6, $(this))" order="0">Year<span class="order"><span class="ascend">&#9650;</span><span class="descend">&#9660;</span></span></th>
+			<th onclick="sortNumber(7, $(this))" order="0">Shows<span class="order"><span class="ascend">&#9650;</span><span class="descend">&#9660;</span></span></th>
+			<th onclick="sortNumber(8, $(this))" order="0">Attendance<span class="order"><span class="ascend">&#9650;</span><span class="descend">&#9660;</span></span></th>
+			<th onclick="sortNumber(9, $(this))" order="0">Average gross per show (millions)<span class="order"><span class="ascend">&#9650;</span><span class="descend">&#9660;</span></span></th>
+			<th onclick="sortNumber(10, $(this))" order="0">Average attendance per show<span class="order"><span class="ascend">&#9650;</span><span class="descend">&#9660;</span></span></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>1</th>
+			<td>$736,421,584</td>
+			<td>$801,130,818</td>
+			<td style="text-align: left">U2</td>
+			<td style="text-align: left">U2 360° Tour</td>
+			<td>2009–11</td>
+			<td>110</td>
+			<td>7,272,046</td>
+			<td>$6.7</td>
+			<td>66,110</td>
+		</tr>
+		<tr>
+			<th>2</th>
+			<td>$558,255,524</td>
+			<td>$658,868,741</td>
+			<td style="text-align: left">The Rolling Stones</td>
+			<td style="text-align: left">A Bigger Bang Tour</td>
+			<td>2005–07</td>
+			<td>144</td>
+			<td>4,680,000</td>
+			<td>$3.8</td>
+			<td>32,500</td>
+		</tr>
+		<tr>
+			<th>3</th>
+			<td>$523,033,675</td>
+			<td>$533,331,898</td>
+			<td style="text-align: left">Coldplay</td>
+			<td style="text-align: left">A Head Full of Dreams Tour</td>
+			<td>2016–17</td>
+			<td>114</td>
+			<td>5,389,586</td>
+			<td>$4.59</td>
+			<td>45,128</td>
+		</tr>
+		<tr>
+			<th>4</th>
+			<td>$480,900,000</td>
+			<td>$490,368,636</td>
+			<td style="text-align: left">Guns N' Roses</td>
+			<td style="text-align: left">Not in This Lifetime... Tour</td>
+			<td>2016–present</td>
+			<td>125</td>
+			<td>4,377,126</td>
+			<td>$3.85</td>
+			<td>35,017</td>
+		</tr>
+		<tr>
+			<th>5</th>
+			<td>$458,673,798</td>
+			<td>$481,869,587</td>
+			<td style="text-align: left">Roger Waters</td>
+			<td style="text-align: left">The Wall Live</td>
+			<td>2010–13</td>
+			<td>219</td>
+			<td>4,129,863</td>
+			<td>$2.09</td>
+			<td>18,858</td>
+		</tr>
+		<tr>
+			<th>6</th>
+			<td>$441,121,000</td>
+			<td>$495,041,025</td>
+			<td style="text-align: left">AC/DC</td>
+			<td style="text-align: left">Black Ice World Tour</td>
+			<td>2008–10</td>
+			<td>167</td>
+			<td>4,846,965</td>
+			<td>$2.6</td>
+			<td>29,023</td>
+		</tr>
+		<tr>
+			<th>7</th>
+			<td>$408,000,000</td>
+			<td>$465,399,721</td>
+			<td style="text-align: left">Madonna</td>
+			<td style="text-align: left">Sticky &amp; Sweet Tour</td>
+			<td>2008–09</td>
+			<td>85</td>
+			<td>3,545,899</td>
+			<td>$4.79</td>
+			<td>41,716</td>
+		</tr>
+		<tr>
+			<th>8</th>
+			<td>$389,047,636</td>
+			<td>$472,277,371</td>
+			<td style="text-align: left">U2</td>
+			<td style="text-align: left">Vertigo Tour</td>
+			<td>2005–06</td>
+			<td>131</td>
+			<td>4,619,021</td>
+			<td>$2.96</td>
+			<td>35,259</td>
+		</tr>
+		<tr>
+			<th>9</th>
+			<td>$364,300,000</td>
+			<td>$364,300,000</td>
+			<td style="text-align: left">Garth Brooks and Trisha Yearwood</td>
+			<td style="text-align: left">World Tour</td>
+			<td>2014–present</td>
+			<td>390</td>
+			<td>4,743,727</td>
+			<td>$0.96</td>
+			<td>14,669</td>
+		</tr>
+		<tr>
+			<th>10</th>
+			<td>$362,000,000</td>
+			<td>$411,460,278</td>
+			<td style="text-align: left">The Police</td>
+			<td style="text-align: left">The Police Reunion Tour</td>
+			<td>2007–08</td>
+			<td>156</td>
+			<td>3,300,912</td>
+			<td>$2.3</td>
+			<td>21,160</td>
+		</tr>
+		<tr>
+			<th>11</th>
+			<td>$355,600,000</td>
+			<td>$405,627,796</td>
+			<td style="text-align: left">Bruce Springsteen and the E Street Band</td>
+			<td style="text-align: left">Wrecking Ball World Tour</td>
+			<td>2012–13</td>
+			<td>136</td>
+			<td>3,650,535</td>
+			<td>$2.8</td>
+			<td>18,744</td>
+		</tr>
+		<tr>
+			<th>12</th>
+			<td>$320,000,000</td>
+			<td>$513,928,805</td>
+			<td style="text-align: left">The Rolling Stones</td>
+			<td style="text-align: left">Voodoo Lounge Tour</td>
+			<td>1994–95</td>
+			<td>124</td>
+			<td>6,336,776</td>
+			<td>$2.6</td>
+			<td>51,103</td>
+		</tr>
+		<tr>
+			<th>13</th>
+			<td>$316,990,940</td>
+			<td>$316,990,940</td>
+			<td style="text-align: left">U2</td>
+			<td style="text-align: left">The Joshua Tree Tour 2017</td>
+			<td>2017</td>
+			<td>51</td>
+			<td>2,713,136</td>
+			<td>$6.3</td>
+			<td>53,198</td>
+		</tr>
+		<tr>
+			<th>14</th>
+			<td>$311,000,000</td>
+			<td>$413,729,016</td>
+			<td style="text-align: left">The Rolling Stones</td>
+			<td style="text-align: left">Licks Tour</td>
+			<td>2002–03</td>
+			<td>115</td>
+			<td>3,470,945</td>
+			<td>$2.6</td>
+			<td>30,182</td>
+		</tr>
+		<tr>
+			<th>15</th>
+			<td>$306,500,000</td>
+			<td>$312,534,803</td>
+			<td style="text-align: left">Bruce Springsteen and the E Street Band</td>
+			<td style="text-align: left">The River Tour 2016</td>
+			<td>2016–17</td>
+			<td>89</td>
+			<td>2,667,775</td>
+			<td>$4.0</td>
+			<td>29,020</td>
+		</tr>
+		<tr>
+			<th>16</th>
+			<td>$305,158,363</td>
+			<td>$325,284,041</td>
+			<td style="text-align: left">Madonna</td>
+			<td style="text-align: left">The MDNA Tour</td>
+			<td>2012</td>
+			<td>88</td>
+			<td>2,212,345</td>
+			<td>$3.47</td>
+			<td>25,140</td>
+		</tr>
+		<tr>
+			<th>17</th>
+			<td>$301,000,000</td>
+			<td>$301,000,000</td>
+			<td style="text-align: left">Billy Joel</td>
+			<td style="text-align: left">Billy Joel in Concert</td>
+			<td>2014–present</td>
+			<td>120</td>
+			<td>2,065,755</td>
+			<td>$2.2</td>
+			<td>22,205</td>
+		</tr>
+		<tr>
+			<th>18</th>
+			<td>$290,178,452</td>
+			<td>$299,967,998</td>
+			<td style="text-align: left">One Direction</td>
+			<td style="text-align: left">Where We Are Tour</td>
+			<td>2014</td>
+			<td>69</td>
+			<td>3,439,560</td>
+			<td>$4.2</td>
+			<td>49,848</td>
+		</tr>
+		<tr>
+			<th>19</th>
+			<td>$279,200,000</td>
+			<td>$425,629,519</td>
+			<td style="text-align: left">Celine Dion</td>
+			<td style="text-align: left">Taking Chances World Tour</td>
+			<td>2008–09</td>
+			<td>132</td>
+			<td>2,200,000</td>
+			<td>$2.1</td>
+			<td>21,667</td>
+		</tr>
+		<tr>
+			<th>20</th>
+			<td>$275,700,000</td>
+			<td>$284,640,994</td>
+			<td style="text-align: left">Paul McCartney</td>
+			<td style="text-align: left">Out There! Tour</td>
+			<td>2013–15</td>
+			<td>84</td>
+			<td>1,958,754</td>
+			<td>$3.28</td>
+			<td>23,319</td>
+		</tr>
+	</tbody>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/js.js"></script>
+</body>
+</html>
