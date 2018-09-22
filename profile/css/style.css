@@ -1,0 +1,41 @@
+* {	
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html, body {
+	font-size: 20px;
+	background: white;
+	min-height: 100vh;
+}
+a {
+	text-decoration: none;
+}
+h1 {
+	color: #222222;
+	text-transform: uppercase;
+}
+header {
+	background: #fafafa;
+}
+#top {
+	position: fixed;
+	bottom: 20px;
+	right: 50px;
+	text-align: right;
+	font-size: 25px
+}
+footer {
+	background: #fafafa;
+	height: 90px;
+	border-top: solid 1px gray;
+	text-align: center;
+	padding-top: 30px;
+	margin-top: 20px;
+}
+nav.navbar {
+	padding: 0px 20px;
+}
+button.navbar-toggler {
+	border: none;
+}

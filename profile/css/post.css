@@ -1,0 +1,84 @@
+#title {
+	width: 100%;
+	height: 500px;
+	background: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: slideInDown 1s;
+}
+h1 {
+	font-size: 70px !important;
+	transition: all 0.7s ease;
+}
+#slidesContainer {
+	width: 100%;
+	height: 100vh;
+	perspective: 1000px;
+	overflow: hidden;
+}
+.slides {
+	width: 300%;
+	height: 100vh;
+}
+.project {
+	width: 33.33333%;
+	height: 100%;
+	float: left;
+/*	background: #fafafa;*/
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	position: relative;
+}
+.backdrop {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(0,0,0,0.2);
+	z-index: 5;
+}
+.project h1 {
+	position: absolute;
+	z-index: 5;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+.project img {
+	height: 100vh;
+}
+.fadeout {
+	animation: fadeout 1s ease;
+	opacity: 0;
+}
+@keyframes fadeout {
+	0% {opacity: 1}
+	100% {opacity: 0}
+}
+@keyframes slideInDown {
+  from {
+    transform: translate3d(0, -10%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+h1 a:hover {
+	text-decoration: none !important;
+	color: white !important;
+}
+.project h1:hover {
+	font-size: 80px !important;
+}
+.scroll {
+	position: absolute;
+	z-index: 5;
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	text-align: center;
+}

@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Gallery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/gallery.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div id="head"></div>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">#K</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="gallery.html">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="projects.html">Projects</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="title" id="title">
+	<h1>Gallery</h1>
+</div>
+<div id="main">
+	<div class="container">
+					<h1>Gallery</h1>
+					<div class="row no-gutters">
+					<div class="item col-md-12 col-lg-4">
+							<img src="img/1.jpg" alt="Hà Nội - nhà thờ lớn" title="Hà Nội - nhà thờ lớn" class="img"/>
+					</div>
+					<div class="item col-md-12 col-lg-4">
+							<img src="img/2.jpg" alt="Thailand" title="Thailand" class="img"/>
+					</div>
+					<div class="item col-md-12 col-lg-4">
+							<img src="img/3.jpg" alt="Bờ biển đảo Quan Lạn" title="Bờ biển đảo Quan Lạn" class="img"/>
+					</div>
+					</div>
+
+					<div class="row no-gutters">
+					<div class="item col-md-12 col-lg-4">
+							<img src="img/4.jpg" alt="Bờ biển đảo Quan Lạn" title="Bờ biển đảo Quan Lạn" class="img"/>
+					</div>
+					<div class="item col-md-12 col-lg-4">
+							<img src="img/5.jpg" alt="Sapa" title="Sapa" class="img"/>
+					</div>
+					<div class="item col-md-12 col-lg-4">
+							<img src="img/6.jpg" alt="Cáp treo lên Fansipan" title="Cáp treo lên Fansipan" class="img"/>
+					</div>
+					</div>
+
+					<div class="row no-gutters">
+					<div class="item col-md-12 col-lg-4">
+							<img src="img/7.jpg" alt="Phố cổ Hà Nội" title="Phố cổ Hà Nội" class="img"/>
+					</div>
+					<div class="item col-md-12 col-lg-4">
+							<img src="img/8.jpg" alt="Đường phố Thailand" title="Đường phố Thailand" class="img"/>
+					</div>
+					<div class="item col-md-12 col-lg-4">
+							<img src="img/9.jpg" alt="Đường phố Thailand - đêm" title="Đường phố Thailand - đêm" class="img"/>
+					</div>
+					</div>
+
+					<div class="row no-gutters">
+					<div class="item col-md-12 col-lg-4">
+							<img src="img/10.jpg" alt="Ngày thả bóng" title="Ngày thả bóng" class="img"/>
+					</div>
+					<div class="item col-md-12 col-lg-4">
+							<img src="img/11.jpg" alt="Đi bão" title="Đi bão" class="img"/>
+					</div>
+					<div class="item col-md-12 col-lg-4">
+							<img src="img/12.jpg" alt="Chiều Tam Đảo" title="Chiều Tam Đảo" class="img"/>
+					</div>
+					</div>
+	</div>
+</div>
+<div id="top">
+		<a href="#head"><i class="fas fa-chevron-up text-secondary"></i></a>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+<script>
+	$(function () {
+		var controller = new ScrollMagic.Controller({
+			globalSceneOptions: {
+			triggerHook: 'onLeave'
+			}
+		});
+		var controller1 = new ScrollMagic.Controller();
+		var slides = document.querySelectorAll("div.title");
+		for (var i=0; i<slides.length; i++) {
+			new ScrollMagic.Scene({
+					triggerElement: slides[i]
+				})
+				.setPin(slides[i])
+				.addTo(controller);
+		}
+		new ScrollMagic.Scene({
+					triggerElement: ".container"
+				})
+				.setClassToggle("#title h1", "fadeout")
+				.addTo(controller1);
+		new ScrollMagic.Scene({
+					triggerElement: ".container"
+				})
+				.setClassToggle(".container h1", "fadein")
+				.setPin(".container h1")
+				.addTo(controller1);
+	});
+	</script>
+</body>
+</html>
