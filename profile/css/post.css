@@ -45,7 +45,7 @@ h1 {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	color: white;
-	font-size: 65px !important;
+	font-size: 50px !important;
 }
 .project img {
 	height: 100vh;
@@ -82,4 +82,9 @@ h1 a:hover {
 	transform: translate(-50%, -50%);
 	color: white;
 	text-align: center;
+}
+@media (min-width: 720px) {
+	.project h1 {
+	font-size: 70px !important;
+	}
 }
