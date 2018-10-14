@@ -1,0 +1,363 @@
+@font-face {
+	font-family: "whiteboard";
+	src: url(../font/Whiteboard-Regular.ttf);
+}
+@font-face {
+	font-family: "note";
+	src: url(../font/Notera.ttf);
+}
+@font-face {
+	font-family: "segoe";
+	src: url(../font/SVN-Segoe-Print.ttf);
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	min-width: 1280px;
+}
+#main {
+	background: url(../UI/background.png);
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+}
+#title, #scroll {
+	font-family: "whiteboard";
+	position: absolute;
+}
+#title {
+	color: #7C6155;
+	right: 50px;
+	top: 60%;
+	font-size: 50px
+}
+#scroll {
+	color: white;
+	text-align: center;
+	bottom: 20px;
+	left: 50%;
+	transform: translate(-50%,0);
+}
+
+/*board*/
+#board {
+	background: url(../UI/notebook.png);
+	background-size: cover;
+	height: 100vh;
+	min-height: 720px;
+	position: relative;
+	display: grid;
+	grid-template-columns: 150px auto;
+	grid-gap: 0;
+}
+#tool {
+	margin: auto;
+	width: 100%;
+}
+#tool img {
+	width: 40px;
+	margin: 15px;
+	transition: all 0.4s;
+}
+.tool:hover img {
+	transform: scale(1.2);
+	cursor: pointer;
+}
+.tool:hover {
+	cursor: pointer;
+}
+#container {
+	display: grid;
+	grid-template-columns: 33.333% 33.333% auto;
+	grid-gap: 0;
+}
+.tool {
+	position: relative;
+	text-align: center;
+}
+.tool .popup {
+	display: none;
+}
+.tool .popup p {
+	width: 234px;
+}
+.tool:hover .popup {
+	position: absolute;
+	left: 80%;
+	top: 50%;
+	width: 294px;
+	height: 86px;
+	background: url(../UI/popup.png);
+	padding: 15px 35px;
+	color: white;
+	font-family: "segoe";
+	font-size: 18px;
+	text-align: center;
+	transform: translateY(-50%);
+	display: block;
+	animation: popup 0.7s ease;
+	overflow: hidden;
+	z-index: 100;
+}
+@keyframes popup {
+	0% {width: 0px}
+	100% {width: 294px}
+}
+.column {
+	padding: 0 20px;
+}
+.column h2 {
+	font-family: "whiteboard";
+	color: #E39797;
+	text-align: center;
+	padding-top: 59px;
+	padding-bottom: 20px;
+}
+.column .content {
+	overflow-y: auto;
+	height: 600px;
+	border: solid 3px rgba(207,226,237,1.00);
+	background: url(../UI/notebook.png) right;
+	background-size: 1400px;
+}
+.content::-webkit-scrollbar, .preview::-webkit-scrollbar {
+	width: auto;
+} 
+.content::-webkit-scrollbar-thumb, .preview::-webkit-scrollbar-thumb {
+    background-color: #E39797;
+	border-radius: 10px;
+}
+.content::-webkit-scrollbar-track, .preview::-webkit-scrollbar-track{
+    background: url(../UI/notebook.png) right;
+	background-size: 1400px;
+}
+body::-webkit-scrollbar{
+	width: auto;
+} 
+body::-webkit-scrollbar-thumb {
+    background: url(../UI/scroll.png) repeat;
+	background-size: 20px auto;
+}
+body::-webkit-scrollbar-track {
+    background: url(../UI/track.png) repeat !important;
+}
+.note, .preview-note {
+	width: 300px;
+	margin: 10px auto;
+	font-family: "note";
+	font-size: 35px;
+	color: white;
+	word-wrap: break-word;
+}
+.note {
+	position: relative;
+}
+.note.yellow .top, .preview-note.yellow .top {
+	background: url(../UI/top.png) top center no-repeat;
+	height: 108px;
+}
+.note.yellow .body, .preview-note.yellow .body {
+	background: url(../UI/mid.png) center repeat-y;
+	min-height: 16px;
+	padding: 0 30px
+}
+.note.yellow .bot, .preview-note.yellow .bot {
+	background: url(../UI/bot.png) center no-repeat;
+	height: 141px;
+}
+.note.blue .top, .preview-note.blue .top {
+	background: url(../UI/top-blue.png) top center no-repeat;
+	height: 108px;
+}
+.note.blue .body, .preview-note.blue .body {
+	background: url(../UI/mid-blue.png) center repeat-y;
+	min-height: 16px;
+	padding: 0 30px
+}
+.note.blue .bot, .preview-note.blue .bot {
+	background: url(../UI/bot-blue.png) center no-repeat;
+	height: 141px;
+}
+.note.green .top, .preview-note.green .top {
+	background: url(../UI/top-green.png) top center no-repeat;
+	height: 108px;
+}
+.note.green .body, .preview-note.green .body {
+	background: url(../UI/mid-green.png) center repeat-y;
+	min-height: 16px;
+	padding: 0 30px
+}
+.note.green .bot, .preview-note.green .bot {
+	background: url(../UI/bot-green.png) center no-repeat;
+	height: 141px;
+}
+.tool.scale {
+	transform: scale(1.4);
+}
+.tool .note {
+	display: none !important;
+}
+#main #pin-placeholder {
+	position: absolute !important;
+	right: 40px;
+	top: 10px
+}
+#xicon {
+	width: 30px;
+	position: absolute; 
+	right: 5px; 
+	top: 15px; 
+	cursor: pointer;
+	transition: all 0.3s;
+}
+#pinicon {
+	width: 30px;
+	position: absolute; 
+	right: 0; 
+	top: 0;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+#xicon:hover, #pinicon:hover {
+	transform: scale(1.2);
+}
+
+/*Modal*/
+#modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+	align-items: center;
+	justify-content: center;
+	display: none;
+	z-index: 100;
+}
+.modal-content {
+	background: white;
+	width: 500px;
+	font-family: "whiteboard";
+	animation: fadein 0.5s ease;
+}
+.modal-header {
+	background: url(../UI/modal-top.jpg) no-repeat;
+	max-height: 55px;
+	padding: 29px 0 0 70px;
+	color: #E39797;
+	text-transform: uppercase;
+}
+.modal-body {
+	background: url(../UI/modal-mid.jpg) repeat;
+	min-height: 54px;
+	padding: 7px 0 0 70px;
+	line-height: 25px;
+	font-size: 20px;
+}
+.modal-footer {
+	background: url(../UI/modal-bot.jpg) repeat;
+	min-height: 53px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+button {
+	width: 90px;
+	height: 45px;
+	border: none;
+	border-radius: 10px;
+	margin: 10px 10px 10px 0;
+	color: white;
+	font-family: "whiteboard";
+	font-size: 18px;
+	cursor: pointer;
+	transition: all 0.5s;
+}
+button.cancel {
+	background: url(../UI/red.png) repeat;
+}
+button.proceed {
+	background: url(../UI/blue.png) repeat;
+}
+button:active {
+  transform: scale(0.8);
+}
+#modal.show, #addnote.show {
+	display: flex;
+}
+.clone {
+	display: none;
+}
+@keyframes fadein {
+	0% {transform: translateY(-100%);}
+	100% {transform: translateY(0);}
+}
+
+/*Add panel*/
+#addnote {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgba(0,0,0,0.5);
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
+.addnote-content {
+	width: 900px;
+	font-family: "whiteboard";
+	display: grid;
+	grid-template-columns: 200px auto;
+	animation: fadein 0.5s ease;
+}
+.addnote-content .options {
+	background: url(../UI/blue.png);
+	padding: 20px;
+	line-height: 40px;
+	font-size: 20px;
+	color: white;
+	grid-row: span 2;
+}
+.addnote-content .preview {
+	background: url(../UI/notebook.png) right;
+	background-size: 1400px;
+	padding: 50px;
+	height: 600px;
+	overflow: auto;
+}
+.addnote-content .preview textarea {
+	width: 100%;
+	background: transparent;
+	border: none;
+	color: white;
+	font-family: "note";
+	font-size: 35px;
+	resize: none;
+}
+textarea::placeholder {
+	color: white;
+}
+textarea::-ms-input-placeholder {
+	color: white;
+}
+.addnote-content .footer {
+	background: white;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.hiddenDiv {
+	display: none;
+  	white-space: pre-wrap;
+  	min-height: 74px;
+  	font-family: "note";
+  	font-size: 35px;
+	word-wrap: break-word;
+}
