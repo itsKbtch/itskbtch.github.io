@@ -156,8 +156,8 @@
 	
 	$(function() { 
 		for (i=0; i < columnList.length; i++) {
-			var noteList = list[columnList[i]] || [];
-			noteList.forEach(function(note) {
+			if (!list[columnList[i]]) {list[columnList[i]] = []}
+			list[columnList[i]].forEach(function(note) {
 				addNote(columnList[i], note.content, note.color, note.pinned);
 			})
 		}
