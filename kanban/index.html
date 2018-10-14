@@ -37,43 +37,21 @@
 	<div id="container">
 		<div class="column todo">
 			<h2 class="title">To Do</h2>
-			<div class="content">
-				<div class="note yellow">
-					<div class="top"></div>
-					<div class="body"><p>Do something</p></div>
-					<div class="bot"></div>
-				</div>
+			<div class="content" id="todo">
+				
 			</div>
 			
 		</div>
 		<div class="column doing">
 			<h2 class="title">Doing</h2>
-			<div class="content">
-				<div class="note blue">
-					<div class="top"></div>
-					<div class="body"><p>Do something</p></div>
-					<div class="bot"></div>
-				</div>
+			<div class="content" id="doing">
+				
 			</div>
 		</div>
 		<div class="column done">
 			<h2 class="title">Done</h2>
-			<div class="content">
-				<div class="note green">
-					<div class="top"></div>
-					<div class="body"><p>Do something</p></div>
-					<div class="bot"></div>
-				</div>
-				<div class="note blue">
-					<div class="top"></div>
-					<div class="body"><p>Pretend to do something</p></div>
-					<div class="bot"></div>
-				</div>
-				<div class="note yellow">
-					<div class="top"></div>
-					<div class="body"><p>Pretend to do something</p></div>
-					<div class="bot"></div>
-				</div>
+			<div class="content" id="done">
+				
 			</div>
 		</div>
 	</div>
@@ -126,187 +104,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
 <script src="script/jquery-ui.min.js"></script>
-<script>
-	var controller = new ScrollMagic.Controller({
-		globalSceneOptions: {
-			triggerHook: "onLeave"
-		}
-	})
-	new ScrollMagic.Scene({
-		triggerElement: "#main"
-	}).setPin("#main").addTo(controller);
-	
-	function deleteNote(item) {
-		$(".modal-title").html("Delete")
-		$(".modal-body").html(function() {
-			//console.log(item)
-			if (item.hasClass("pinned")) {
-				return "This is a pinned note. If you delete this note, the pinned note will also be deleted. Are you sure you want to delete this note?"
-			} else {
-				return "Are you sure you want to delete this note?"
-			}
-		})
-		$("#modal button.proceed").html("Yes")
-		$("#modal").toggleClass("show")
-		$("#modal button.proceed").on("click", function() {
-			//console.log(item, $("#delete .note"))
-			if (item.hasClass("pinned")) {
-				$("#main .note").remove();
-			}
-			item.remove();
-			$(".temp-placeholder").remove();
-			$("#modal").removeClass("show");
-			$("#modal button").off("click");
-		})
-		$("#modal button.cancel").on("click", function(){
-			//console.log(item, $("#delete .note"))
-			$(".temp-placeholder").after(item).remove();
-			$("#modal").removeClass("show");
-			$("#modal button").off("click");
-		})
-	}
-	
-	function pinNote(item) {
-		$(".modal-title").html("Pin")
-		$(".modal-body").html("Are you sure you want to pin this note? It will replace the previous pinned note.")
-		$("#modal button.proceed").html("Yes")
-		$("#modal").toggleClass("show")
-		$("#modal button.proceed").on("click", function() {
-			if($("#main .note").length>0) {
-				$("#main .note, .content #pinicon").remove();
-				$(".content .note.pinned").removeClass("pinned");
-			}
-			//console.log(item, $("#pin .note"))
-			item.clone().addClass("pinned").removeAttr("style").append($("<img src='UI/x-icon.png' id='xicon' onclick='unpinNote()' title='Unpin this note'>")).appendTo("#pin-placeholder");
-			item.addClass("pinned").append($("<img src='UI/pin.png' id='pinicon' onclick='unpinNote()' title='Unpin this note'>"));
-			$(".temp-placeholder").after(item).remove();
-			$("#modal").removeClass("show");
-			$("#modal button").off("click");
-		})
-		$("#modal button.cancel").on("click", function() {
-			//console.log(item, $("#pin .note"))
-			$(".temp-placeholder").after(item).remove();
-			$("#modal").removeClass("show");
-			$("#modal button").off("click");
-		})
-	}
-	
-	function unpinNote() {
-		$(".modal-title").html("Unpin")
-		$(".modal-body").html("Are you sure you want to unpin this note?")
-		$("#modal button.proceed").html("Yes")
-		$("#modal").toggleClass("show")
-		$("#modal button.proceed").on("click", function() {
-			$("#main .note, .content #pinicon").remove();
-			$(".content .note.pinned").removeClass("pinned");
-			$("#modal").removeClass("show");
-			$("#modal button").off("click");
-		})
-		$("#modal button.cancel").on("click", function() {
-			$("#modal").removeClass("show");
-			$("#modal button").off("click");
-		})
-	}
-	
-	var txt = $('textarea'), hiddenDiv = $(document.createElement('div')), content = null;
-	function resizeTextarea() {
-		content = txt.val();
-    	hiddenDiv.html(content + '<br> ');
-    	txt.css('height', hiddenDiv.height() + "px");
-	}
-	
-	$(function() { 
-		$(".content").sortable({
-      		connectWith: ".content, .tool",
-			cursorAt: {left: 120, top: 20}
-    	});
-
-		$(".tool#delete").sortable({
-			//connectWith: ".content",
-			cancel: ".tool img, .tool .popup",
-			receive: function(event, ui) {
-					deleteNote(ui.item);
-			},
-			over: function(event, ui) {
-					$(this).toggleClass("scale");
-					$("<div class='temp-placeholder'></div>").insertAfter(ui.item);
-			},
-			out: function(event, ui) {
-					$(this).toggleClass("scale");
-					ui.item.parent().children(".temp-placeholder").remove();
-			}
-		})
-		$(".tool#pin").sortable({
-			//connectWith: ".content",
-			cancel: ".tool img, .tool .popup",
-			receive: function(event, ui) {
-					pinNote(ui.item);
-			},
-			over: function(event, ui) {
-					$(this).toggleClass("scale");
-					$("<div class='temp-placeholder'></div>").insertAfter(ui.item);
-			},
-			out: function(event, ui) {
-					$(this).toggleClass("scale");
-					ui.item.parent().children(".temp-placeholder").remove();
-			}
-		})
-		
-  		txt.on('keyup', resizeTextarea);
-		$("#addnote button.cancel").on("click", function() {
-			$("#addnote").removeClass("show");
-		})
-		$("#addnote .colors input").on("change", function() {
-			if ($(this).prop("checked")) {
-				$(".preview-note").removeClass("blue yellow green").addClass($(this).val())
-			}
-		})
-		$("#addnote .footer .proceed").on("click", function() {
-			if ($("#addnote .columns #todo").prop("checked") != true && $("#addnote .columns #doing").prop("checked") != true && $("#addnote .columns #done").prop("checked") != true) {
-				$(".modal-title").html("Error")
-				$(".modal-body").html("You haven't chosen a column yet. You need to choose a column.")
-				$("#modal button.proceed").css("display", "none")
-				$("#modal").toggleClass("show")
-				$("#modal button.cancel").on("click", function() {
-					$("#modal").removeClass("show");
-					$("#modal button.proceed").removeAttr("style");
-					$("#modal button").off("click");
-				})
-			} else {
-				if (txt.val() == "") {
-					$(".modal-title").html("Error")
-					$(".modal-body").html("There's nothing on your note!!")
-					$("#modal button.proceed").css("display", "none")
-					$("#modal").toggleClass("show")
-					$("#modal button.cancel").on("click", function() {
-						$("#modal").removeClass("show");
-						$("#modal button.proceed").removeAttr("style");
-						$("#modal button").off("click");
-					})
-				} else {
-					var column;
-					$("#addnote .columns input").each(function() {
-						if($(this).prop("checked") == true) {
-						column= "." + $(this).val() + " .content";
-						}
-					})
-					var newNote= $(".preview-note").clone().addClass("note").removeClass("preview-note");
-					newNote.children(".body").html(content);
-					newNote.appendTo(column);
-					$("#addnote").removeClass("show");
-				}
-			}
-		})
-		$(".tool#add").on("click", function() {
-			$("#addnote #yellow").prop("checked", true).change();
-			$("#addnote .columns input").prop("checked", false);
-			$("#addnote").toggleClass("show");
-			hiddenDiv.addClass("hiddenDiv").css("width", txt.width() + "px");
-			txt.val("").css("overflow", "hidden");
-  			$('.preview-note .body').append(hiddenDiv);
-			resizeTextarea()
-		})
-  	});
-	</script>
+<script src="script/js.js"></script>
 </body>
 </html>
