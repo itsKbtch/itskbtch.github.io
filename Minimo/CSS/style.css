@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Playfair+Display|Ubuntu');
+
+body {
+  font-family: 'Playfair Display', serif;
+  color: #626262;
+  font-size: 14px;
+}
+.container {
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+a.category, a.comment {
+  font-family: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  color: #b4ad9e;
+}
+a.navbar-brand {
+  font-family: 'Inconsolata', monospace;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 5px;
+}
+h1 a {
+  font-size: 30px;
+  color: #626262;
+}
+.thumbnail img {
+  width: 100%;
+}
+.description {
+  padding: 0 15px;
+  margin: 40px 0 60px 0;
+}
+.newsletter {
+  background: #f0f0f0;
+  padding: 50px;
+  text-align: center;
+  margin: 40px 0 100px 0;
+}
+.newsletter h1, footer a {
+  color: #333333
+}
+.newsletter input {
+  background: transparent;
+  border: none;
+  width: 90%;
+}
+.email {
+  border-bottom: solid 1px black;
+  max-width: 350px;
+  margin: 70px auto 40px auto;
+  padding: 5px 0;
+}
+img.send {
+  width: 10%;
+  cursor: pointer;
+}
+button.load-more {
+  background: transparent;
+  border: solid 1px #626262;
+  width: 164px;
+  height: 60px;
+  font-size: 20px;
+  display: block;
+  margin: 80px auto;
+  color: #626262;
+  cursor: pointer;
+}
+footer {
+  background: #f0f0f0;
+  padding: 40px;
+  text-align: center;
+  color: #333333;
+}
+footer a, footer i {
+  margin: 5px
+}
+address {
+  margin: 0;
+}
+nav {
+  margin-bottom: 30px;
+}
+a:hover {
+  color: inherit;
+}
+a.category:hover, a.comment:hover {
+  text-decoration: none;
+  color: #b4ad9e;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .first-post .description {
+    margin: 100px 80px
+  }
+  .description {
+    padding: 0;
+  }
+  .other-posts {
+    margin: 0 80px;
+    display: grid;
+    grid-template-columns: 46.7% auto;
+    grid-column-gap: 6.6%;
+	grid-row-gap: 40px;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 80px;
+    align-items: center;
+  }
+}
+@media (min-width: 992px) {
+  section {
+    margin: 0 70px;
+  }
+  .navbar {
+    padding: 0;
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  .navbar-nav {
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .nav-item {
+    margin-left: 80px
+  }
+  footer {
+    padding: 40px 150px;
+  }
+  nav {
+    margin: 30px 0;
+  }
+}
