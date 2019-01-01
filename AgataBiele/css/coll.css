@@ -140,6 +140,7 @@ nav .show .navNo {
   width: 200px;
   height: 100px;
   overflow: scroll;
+  z-index: 1;
 }
 .imgContainer, .quoteContainer {
   position: absolute;
@@ -149,9 +150,6 @@ nav .show .navNo {
   width: 50%;
   height: 100%;
   z-index: 0;
-}
-.quoteContainer {
-  z-index: 4;
 }
 .section.no1 .imgContainer {
   right: 0;
@@ -327,8 +325,7 @@ nav .show .navNo {
     width: 55%;
   }
   .section.no3 .quoteContainer {
-    padding: 55px 55px 26px 0;
-    align-content: space-between
+    align-content: center;
   }
   .section.no3 .quoteContainer .line {
     height: 25%;

@@ -334,7 +334,7 @@ of purpose
 			}, 1000);
 			$("footer .seeall a").css("text-decoration", "underline");
 			curPos= 0;
-			prevPos= $(".coll .main").scrollTop();
+			prevPos= 0;
 			scrolled= false;
 			section= 1;
 			$("#collNo"+showColl).find(".nav.show").toggleClass("show");
@@ -438,6 +438,21 @@ of purpose
 			prevPos= curPos+elm;
 			scrolled= true;
 			setTimeout(function() {scrolled= false}, 500);
+		})
+		$(".coll .nextColl a").on("click", function() {
+			showColl++;
+			$("#collNo"+showColl).removeClass("deactive").addClass("active");
+			setTimeout(function() {
+				$("#collNo"+(showColl-1)).addClass("deactive");
+				$("#collNo"+showColl).removeClass("active");
+			}, 1000);
+			curPos= 0;
+			prevPos= 0;
+			scrolled= false;
+			section= 1;
+			$("#collNo"+showColl).find(".nav.show").toggleClass("show");
+			$("#collNo"+showColl).find(".nav.no"+section).toggleClass("show");
+			$("#collNo"+showColl+" .main").scrollTop(0);
 		})
 	})
 	window.addEventListener("load", function() {
