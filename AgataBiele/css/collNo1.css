@@ -1,0 +1,56 @@
+#collNo1 .section.no1 .background .right {
+  background: #ede0df;
+}
+#collNo1 .section.no1 .background .left {
+  background: white;
+}
+#collNo1 .section.no1 .imgContainer {
+  background: url(../img/images/Right_Line/rectangle.png) no-repeat;
+  background-position-x: 42%;
+  background-size: contain;
+}
+#collNo1 .section.no2 .background .left {
+  background: #e5eaeb;
+}
+#collNo1 .section.no2 .background .right {
+  background: white;
+}
+#collNo1 .section.no2 .imgContainer {
+  background: url(../img/images/Right_Line/rectangle.png) no-repeat;
+  background-position-x: 58%;
+  background-size: contain;
+}
+#collNo1 .section.no3 .background .right {
+  background: #ede0df;
+}
+#collNo1 .section.no3 .background .left {
+  background: white;
+}
+#collNo1 .section.no3 .quoteContainer {
+  background: url(../img/images/Right_Line/small-rec.png) no-repeat;
+  background-position-x: 42%;
+  background-size: contain;
+}
+#collNo1 .section.no4 .background .top {
+  background: #ede0df;
+}
+#collNo1 .section.no4 .background .bot {
+  background: white;
+}
+#collNo1 .section.no4 .imgContainer {
+  background: url(../img/images/Right_Line/rectangle.png) no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+#collNo1 .section.no4 .imgContainer::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  background: url(../img/images/Right_Line/rectangle.png) no-repeat;
+  background-position: center;
+  background-size: 70%;
+  z-index: -1;
+}

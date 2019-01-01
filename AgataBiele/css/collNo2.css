@@ -1,0 +1,63 @@
+#collNo2 .section.no1 .background .right {
+  background: #ede0df;
+}
+#collNo2 .section.no1 .background .left {
+  background: white;
+}
+#collNo2 .section.no1 .imgContainer {
+  background: url(../img/images/Nature_Line/shape.png) no-repeat;
+  background-position-x: 42%;
+  background-size: contain;
+}
+#collNo2 .section.no2 .background .left {
+  background: #e5eaeb;
+}
+#collNo2 .section.no2 .background .right {
+  background: white;
+}
+#collNo2 .section.no2 .imgContainer {
+  background: url(../img/images/Nature_Line/shape.png) no-repeat;
+  background-position-x: 58%;
+  background-size: contain;
+}
+#collNo2 .section.no2 .imgContainer img {
+  background-color: #ede0df;
+  padding: 10% 0 0 5%;
+}
+#collNo2 .section.no3 .background .right {
+  background: #ede0df;
+}
+#collNo2 .section.no3 .background .left {
+  background: white;
+}
+#collNo2 .section.no3 .quoteContainer {
+  background: url(../img/images/Nature_Line/small_shape.png) no-repeat;
+  background-position-x: 42%;
+  background-size: contain;
+}
+#collNo2 .section.no4 .background .top {
+  background: #dce7e9;
+}
+#collNo2 .section.no4 .background .bot {
+  background: white;
+}
+#collNo2 .section.no4 .imgContainer {
+  background: url(../img/images/Nature_Line/shape2.png) no-repeat;
+  background-position: center;
+  background-size: 70%;
+}
+#collNo2 .section.no4 .imgContainer::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  background: url(../img/images/Nature_Line/shape2.png) no-repeat;
+  background-position: center;
+  background-size: 70%;
+  z-index: -1;
+  transform: rotate(180deg);
+}
+
+

@@ -1,0 +1,347 @@
+.deactive {
+  display: none !important;
+}
+.active {
+  animation: flyin ease 1s;
+  position: absolute;
+  top: 0; 
+  left: 0;
+}
+@keyframes flyin {
+	0% {z-index: 3; transform: translateX(100%);}
+	100% {z-index: 3; transform: translateX(0%)}
+}
+.coll {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.coll a {
+  transition: all ease 0.7s;
+}
+.coll a:hover {
+  text-shadow: 0 1px gray;
+}
+.coll .main {
+  width: calc(100% + 15px);
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.section {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+nav {
+  position: fixed;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 50px;
+  z-index: 3;
+}
+nav .line {
+  display: block;
+  width: 0;
+}
+nav .show .line {
+  width: 0;
+  height: 50px;
+  display: block;
+  border-left: solid 1px black;
+  border-top: none;
+  margin: auto;
+  animation: height ease 0.7s;
+}
+nav .show .navNo {
+  font-size: 24px;
+  animation: fontsize ease 0.7s;
+}
+@keyframes height {
+	0% {height: 0}
+	100% {height: 50px}
+}
+@keyframes fontsize {
+	0% {font-size: 0}
+	100% {font-size: 24px}
+}
+.subheader .prevContainer, .subheader .nextContainer, .subfooter .container, .subfooter > span  {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.subheader .prevContainer {
+  left: 30px;
+}
+.subheader .nextContainer {
+  right: 30px;
+}
+.subheader .line {
+  width: 50px;
+  border-color: #848b8c;
+}
+.subheader a {
+  text-decoration: underline;
+  margin: 5px;
+  color: #848b8c;
+}
+.subfooter .container {
+  left: 30px;
+}
+.subfooter .line {
+  width: 20px;
+  margin: 0 10px;
+}
+.subfooter > span {
+  left: 235px;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  display: flex;
+  flex-wrap: wrap;
+}
+.background .left {
+  width: 50%;
+  height: 100%;
+}
+.background .right {
+  width: 50%;
+  height: 100%;
+}
+.background .top {
+  width: 100%;
+  height: 70%;
+}
+.background .bot {
+  width: 100%;
+  height: 30%;
+}
+.section.no1 .collName {
+  position: absolute;
+  top: 30%;
+  left: 100px;
+  font-weight: normal;
+  
+}
+.section.no1 .collDes {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 200px;
+  height: 100px;
+  overflow: scroll;
+}
+.imgContainer, .quoteContainer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  z-index: -1
+}
+.section.no1 .imgContainer {
+  right: 0;
+  padding-right: 30px;
+}
+.section.no1 .imgContainer img {
+  width: 50%;
+  display: block;
+} 
+.section.no2 .imgContainer {
+  padding-left: 30px;
+}
+.section.no2 .imgContainer img {
+  width: 50%;
+}
+.section.no2 .quote {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: adobe-garamond-pro, serif;
+}
+.section.no3 .quoteContainer {
+  right: 0;
+  text-align: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding-right: 30px;
+}
+.section.no3 .quoteContainer > *:not(.line) {
+  width: 100%;
+}
+.section.no3 .quoteContainer .line {
+  height: 50px;
+  border-left: solid 1px black;
+  margin: 10px 0;
+}
+.section.no3 .quoteContainer .share a {
+  text-decoration: underline;
+}
+.section.no3 .imgContainer {
+  flex-direction: column;
+  padding-left: 30px;
+}
+.section.no3 .imgContainer img {
+  width: 50%;
+}
+.section.no3 .imgContainer p {
+  width: 50%;
+  height: 70px;
+  overflow: scroll;
+  margin: 10px 0;
+}
+.section.no4 .imgContainer {
+  transform: translateX(50%);
+}
+.section.no4 .imgContainer img {
+  width: 50%;
+}
+.section.no4 .h2_season {
+  position: absolute;
+  top: 50%;
+  left: 24%;
+  transform: translate(-50%,-50%);
+  font-weight: normal;
+}
+.section.no4 .h2_year {
+  position: absolute;
+  top: 50%;
+  right: 24%;
+  transform: translate(-50%,-50%);
+  font-weight: normal;
+}
+.section.no4 .nextColl {
+  position: absolute;
+  right: 0;
+  bottom: 15px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+.section.no4 .nextColl .line {
+  width: 70px;
+  margin-left: 5px;
+}
+
+@media (min-width: 900px) {
+  .subfooter .line {
+    width: 70px;
+  }
+  .subfooter .container {
+    left: 80px;
+  }
+  .subfooter > span {
+    left: 38%;
+  }
+  nav .show .line {
+    height: 100px;
+  }
+  nav .show .navNo {
+    font-size: 48px;
+  }
+  .nav {
+    padding: 10px 0;
+  }
+  @keyframes height {
+    0% {height: 0}
+	100% {height: 100px}
+  }
+  @keyframes fontsize {
+	0% {font-size: 0}
+	100% {font-size: 48px}
+  }
+  .section.no1 .collDes {
+    top: 60%;
+    left: 38%;
+    bottom: 55px;
+    height: auto;
+    overflow: auto;
+    border-top: solid 1px black;
+    padding-top: 10px;
+  }
+  .section.no1 .collName {
+    font-size: 72px
+  }
+  .section.no1 .imgContainer .img {
+    width: 70%
+  }
+  .section.no2 .imgContainer .img {
+    align-self: flex-start;
+    width: 70%;
+  }
+  .section.no2 .quote {
+    font-size:  60px;
+  }
+  .section.no3 .quoteContainer {
+    padding: 55px 55px 55px 0;
+  }
+  .section.no3 .quoteContainer .line {
+    height: 25%;
+  }
+  .section.no3 .quoteContainer p {
+    font-size: 35px;
+    font-style: italic;
+  }
+  .section.no3 .imgContainer p {
+    height: auto;
+  }
+  .section.no4 .nextColl {
+    font-size: 48px;
+  }
+}
+@media (min-width: 1400px) {
+  .subfooter .line {
+    width: 200px;
+  }
+  .section.no1 .collDes {
+    top: auto;
+    width: 270px;
+    padding-right: 60px;
+  }
+  .section.no1 .collName {
+    font-size: 72px;
+  }
+  .section.no1 .imgContainer .img {
+    width: 50%;
+  }
+  .section.no2 .imgContainer .img {
+    align-self: flex-start;
+    width: 55%;
+  }
+  .section.no3 .quoteContainer {
+    padding: 55px 55px 26px 0;
+    align-content: space-between
+  }
+  .section.no3 .quoteContainer .line {
+    height: 25%;
+  }
+  .section.no3 .quoteContainer p {
+    font-size: 48px;
+  }
+  .section.no3 .imgContainer img {
+    width: 40%;
+  }
+  .section.no3 .imgContainer p {
+    width: 40%;
+    height: auto;
+    overflow: auto;
+  }
+  .section.no4 .imgContainer img {
+    width: 35%;
+  }
+}
