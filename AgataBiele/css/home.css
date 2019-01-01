@@ -91,10 +91,7 @@
 }
 body {
   	font-family: adobe-garamond-pro, serif;
-	overflow: hidden;
-}
-#container {
-    height: 100vh;
+	  overflow: hidden;
 }
 #seeall {
     background: url(../img/background.png) fixed no-repeat;
@@ -288,10 +285,14 @@ footer a:hover {
   #seeall .subheader, #seeall .subfooter {
     background: white;
   }
+  address {
+    bottom: 170px;
+  }
 }
 @media (min-width: 900px) {
   #container {
     overflow: hidden;
+    height: 100vh;
   }
   #seeall .main {
     align-self: center;
