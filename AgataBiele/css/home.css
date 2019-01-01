@@ -5,7 +5,7 @@
 }
 #poitrait {
   position: fixed;
-  z-index: 5;
+  z-index: 6;
   background: white;
   width: 100vw;
   height: 100vh;
@@ -46,7 +46,7 @@
 }
 #load {
   position: fixed;
-  z-index: 5;
+  z-index: 7;
   background: white;
   width: 100vw;
   height: 100vh;
@@ -107,7 +107,7 @@ header, footer {
   transform: translateX(-50%);
   height: 55px;
   position: fixed;
-  z-index: 4;
+  z-index: 5;
 }
 footer {
   bottom: 0;
@@ -137,7 +137,7 @@ address {
     left: -90px;
     bottom: 200px;
     padding: 0;
-    z-index: 4;
+    z-index: 5;
 }
 address a {
   font-style: normal;
