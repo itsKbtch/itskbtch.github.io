@@ -20,6 +20,10 @@ h1 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background: url(../img/avatar.jpg) no-repeat fixed;
+	background-size: cover;
+	background-position: center;
+	
 }
 #gap {
 	height: 50vh;
