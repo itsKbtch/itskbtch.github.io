@@ -4,12 +4,15 @@
 	box-sizing: border-box;
 }
 html, body {
-	font-size: 20px;
+	font-size: 16px;
 }
 .wrap {
 	position: relative;
 	max-width: 1000px;
 	margin: auto;
+}
+header .wrap {
+	max-width: none;
 }
 a {
 	color: gray;
@@ -25,39 +28,55 @@ a:hover {
 }
 h1 {
 	color: #222222;
-	margin: 30px 20px 10px 10px;
 	text-transform: uppercase;
-}
-header {
-	background: #fafafa;
-	border-bottom: solid 1px #AEAEAE;
+	margin: 90px 0;
+	font-weight: 500;
+	font-style: italic;
+	text-align: center;
 }
 #banner {
 	width: 100%;
 	text-align: center;
 	margin: auto;
-	font-size: 0;
+	height: 500px;
+	background: url(../img/banner.png) no-repeat;
+	background-size: cover;
+	background-position: 0 -100px;
+	background-attachment: fixed;
+	position: relative;
 }
 #banner img {
 	width: 100%;
 }
+#banner h1 {
+	position: absolute;
+  top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	color: white;
+}
 nav {
-	border-left: solid 1px #AEAEAE;
-	border-right: solid 1px #AEAEAE;
 	background: white;
-	line-height: 70px;
 	text-align: center;
 	margin: auto;
+	max-width: 1000px;
+	padding: 15px 0;
+}
+nav ul {
+	display: flex;
 }
 nav li {
 	list-style-type: none;
-	display: inline-block;
+	list-style-position: inside;
+	width: 20%;
 }
 nav a {
 	color: gray;
 	text-decoration: none;
-	font-weight: bold;
-	padding: 0 20px;
+	font-weight: normal;
+	padding: 0 50px;
+	font-size: 18px;
 }
 #top {
 	position: fixed;
@@ -65,12 +84,21 @@ nav a {
 	right: 50px;
 	text-align: right;
 	background: white;
+	font-size: 16px;
 }
-footer {
-	background: #fafafa;
+body > footer {
 	height: 90px;
-	border-top: solid 1px gray;
 	text-align: center;
-	padding-top: 30px;
-	margin-top: 20px;
+	margin-top: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fdfdfd;
+}
+address i {
+	padding: 10px;
+}
+address::before {
+	content: "follow";
+	color: gray;
 }

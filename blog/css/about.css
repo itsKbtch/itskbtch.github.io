@@ -1,12 +1,41 @@
 .about p {
-	border-left: solid 2px #222222;
-	background: #fafafa;
 	padding: 20px;
+	font-size: 18px;
+	line-height: 30px;
+	height: 100%;
+	width: 25%;
+	padding: 50px 20px;
+}
+.about a {
+	color: white
 }
 .about {
-	color: gray;
+	color: white;
 	width: 100%;
-	box-sizing: border-box;
+	height: 200px;
+	display: flex;
+	
+}
+.about:nth-of-type(1) {
+	background: url(../img/ava.jpg) no-repeat fixed;
+	background-position: center;
+	background-size: cover;
+	justify-content: flex-start;
+	align-items: center;
+}
+.about:nth-of-type(1) p {
+	background: rgb(131, 164, 164);
+}
+.about:nth-of-type(2) {
+	background: url(../img/ava2.jpg) no-repeat fixed;
+	background-size: cover;
+	background-position: center 200px;
+	justify-content: flex-end;
+	align-items: center;
+}
+.about:nth-of-type(2) p {
+	background: rgb(207, 161, 116);
+	text-align: center;
 }
 #ava {
 	display: block;
@@ -14,4 +43,7 @@
 	float: right;
 	border: solid 5px #D6D6D6;
 	border-radius: 50%;
+}
+body > .wrap {
+	padding: 0 0 100px 0;
 }
