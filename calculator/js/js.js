@@ -137,7 +137,7 @@
 			}
 			function sqrt() {
 				if ($("#screen2")[0].value != "") {
-				if (Number.isInteger(Number($("#screen2")[0].value)) && Number($("#screen2")[0].value) >= 0) {
+				if (/*Number.isInteger(Number($("#screen2")[0].value)) && */Number($("#screen2")[0].value) >= 0) {
 				$("#screen2")[0].value = Math.sqrt(Number($("#screen2")[0].value));
 				ans=true;
 				} else {
