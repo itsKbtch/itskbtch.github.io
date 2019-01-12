@@ -14,7 +14,7 @@ form {
 	color: white;
 	display: grid;
 	grid-template-columns: 49% 49%;
-	grid-gap: 2%;
+	grid-gap: 0 2%;
 }
 h1 {
 	text-align: center;
