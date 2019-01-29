@@ -1,3 +1,31 @@
+@font-face {
+  font-family: trixie;
+  src: url(../fonts/Trixie-Plain.otf);
+}
+@keyframes side {
+	0% {width: 0%;}
+	100% {width: 70%;}
+}
+@keyframes side-in {
+	0% {width: 70%;}
+	100% {width: 0%;}
+}
+@keyframes mouse {
+	0% {top: 2px;}
+	100% {top: 11px;}
+}
+@keyframes height {
+  0% {height: 0}
+	100% {height: 100px}
+}
+@keyframes width {
+  0% {width: 0}
+	100% {width: 50px}
+}
+@keyframes fontsize {
+	0% {font-size: 16px}
+	100% {font-size: 24px}
+}
 * {	
 	margin: 0;
 	padding: 0;
@@ -6,36 +34,483 @@
 html, body {
 	font-size: 20px;
 	background: white;
-	min-height: 100vh;
+	font-family: trixie;
+	position: relative;
+	height: 100vh;
+	background-image: url(../img/background.jpg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
-a {
-	text-decoration: none;
+html {
+	overflow: hidden;
 }
-h1 {
-	color: #222222;
-	text-transform: uppercase;
+body {
+	overflow-y: scroll;
 }
-header {
-	background: #fafafa;
+.vertical {
+	display: none;
 }
-#top {
-	position: fixed;
-	bottom: 20px;
-	right: 50px;
-	text-align: right;
-	font-size: 25px
+
+
+
+/*media < 768px*/
+nav {
+	display: none;
 }
-footer {
-	background: #fafafa;
-	height: 90px;
-	border-top: solid 1px gray;
-	text-align: center;
-	padding-top: 30px;
-	margin-top: 20px;
+.nav-item {
+	display: none;
 }
-nav.navbar {
-	padding: 0px 20px;
+#head {
+		background-image: url(../img/head.png);
+		width: 214px;
+		height: 131px;
 }
-button.navbar-toggler {
-	border: none;
+#head a {
+		color: #6a3b53;
+		text-decoration: none;
+		font-size: 100px;
+}
+#info {
+		background-image: url(../img/pop-out0.png);
+		width: 338px;
+		height: 149px;
+		color: white;
+		padding: 20px;
+		display: flex;
+		align-items: center;
+		position: relative;
+		transition: all ease 0.7s;
+}
+#info:after {
+		content: "";
+		width: 14px;
+		height: 81px;
+		position: absolute;
+		top: 90%;
+		left: 50%;
+		transform: translateX(-50%);
+		background: url(../img/pull.png);
+}
+#cv {
+	  width: 100%;
+		background: white;
+		font-size: 14px;
+}
+#cv .page {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+}
+#cv .page > div {
+		width: 100%;
+		flex-shrink: 0;
+}
+#cv .ava {
+		background-image: url(../img/ava.jpg);
+		background-size: contain;
+		width: 250px !important;;
+		height: 250px !important;;
+		grid-row: span 2;
+		align-self: center;
+		justify-self: center;
+		border-radius: 50%;
+}
+#cv .education .content > div, #cv .activities .content > div {
+		display: grid;
+		grid-template-columns: 30% 70%;
+}
+.chart {
+		width: 100%;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		flex-shrink: 0;
+}
+#cv .skills .skill:not(.eng) {
+		display: grid;
+		grid-template-columns: 30% 70%;
+}
+#cv .skill img {
+		width: 40px;
+		margin: 5px 5px;
+}
+#projects {
+		background: white;
+}
+.project {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		overflow: hidden;
+		position: relative;
+}
+.backdrop {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background: rgba(0,0,0,0.2);
+		z-index: 5;
+}
+.project h1 {
+		position: absolute;
+		z-index: 5;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 50px !important;
+		transition: all ease 0.7s;
+		text-align: center;
+}
+.project h1:hover {
+		font-size: 55px !important;
+}
+.project h1 a {	
+		text-decoration: none;
+		color: white;
+}
+.project img {
+		height: 100vh;
+}
+.control {
+		font-size: 14px;
+		color: white;
+}
+.control .wrapper {
+		background-image: url(../img/pop-out0.png);
+		width: 338px;
+		height: 149px;
+		padding: 20px;
+}
+.control h1 {
+		position: absolute;
+		bottom: 90%;
+		left: 0;
+		font-size: 36px;
+		font-weight: bold;
+}
+.lang-container, .theme-container {
+		display: grid;
+		grid-template-columns: 35% 65%;
+		padding: 5px;
+}
+.control a {
+		color: white;
+}
+.control .active {
+		opacity: 0.4;
+}
+
+@media (min-width: 768px) and (min-height: 600px) {
+	html, body {
+		overflow: hidden;
+	}
+	#main {
+		height: 100vh;
+		display: flex;
+		flex-wrap: nowrap;
+	}
+	.background {
+		background-image: url(../img/background.jpg);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 100%;
+		align-self: flex-start;
+		width: 100%;
+		z-index: 0;
+		order: 3
+	}
+	#head {
+		position: absolute;
+		top: 30%;
+		left: 20%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+	.nav-item {
+		background-image: url(../img/pop-out3.png);
+		width: 332px;
+		height: 85px;
+		padding: 20px 100px 30px 40px;
+		color: white;
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		transition: all ease 0.7s;
+		cursor: pointer;
+		position: absolute;
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+	.nav-item:hover {
+		transform: translateX(5%);
+	}
+	#info {
+		transform: translateY(-70%);
+		position: absolute;
+		right: 10%;
+		top: 0;
+		transition: all ease 0.7s;
+		z-index: 1;
+	}
+	#info:hover {
+		transform: translateY(-10%);
+	}
+	#cv {
+		width: 0;
+		height: 100vh;
+		position: relative;
+		z-index: 2;
+	}
+	#cv .cvcontainer {
+		overflow: hidden;
+		height: 100%;
+		position: relative;
+	}
+	#cv .wrap {
+		width: calc(70vw + 20px);
+		background: white;
+		height: 100%;
+		z-index: 2;
+		overflow-y: scroll;
+	}
+	#cv .page {
+		width: 100%;
+		height: 100vh;
+	}
+	#cv .page > div {
+		width: 80%;
+	}
+	#cv .programing .frontend > div, #cv .programing .others > div {
+		display: grid;
+		grid-template-columns: 33.33% 33.33% 33.33%;
+		align-items: center;
+		justify-content: center;
+		justify-items: center;
+		flex-shrink: 0;
+	}
+	#cv .skills .eng .skill-detail {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-column: span 2;
+		align-items: center;
+		justify-content: center;
+		justify-items: center;
+		flex-shrink: 0;
+	}
+	#cv .nav-item {
+		bottom: 10%;
+		left: calc(100% - 120px);
+		z-index: -1;
+	}
+
+
+	#projects {
+		width: 0px;
+		height: 100vh;
+		position: relative;
+		z-index: 2;
+	}
+	#slidesContainer {
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+	}
+	.slides {
+		width: calc(70vw + 20px);
+		height: 100vh;
+		overflow-y: scroll;
+	}
+	#projects .nav-item {
+		bottom: calc(10% + 85px);
+		left: calc(100% - 120px);
+		z-index: -1;
+	}
+
+	#cv.active, #projects.active {
+		width: 70%;
+		animation: side ease 0.7s;
+		order: 1;
+		z-index: 3;
+		flex-shrink: 0;
+	}
+	#cv.deactive, #projects.deactive {
+		animation: side-in ease 0.7s;
+	}
+	#projects nav {
+		position: absolute;
+		right: 0.5%;
+		top: 50%;
+		transform: translateY(-50%);
+		text-align: center;
+		width: 50px;
+		font-size: 14px;
+		z-index: 5;
+		display: block;
+		color: white;
+	}
+	#cv nav {
+		position: absolute;
+		left: 0;
+		top: 0;
+		text-align: center;
+		width: 70vw;
+		font-size: 14px;
+		z-index: 5;
+		display: grid;
+		grid-template-columns: auto auto auto auto auto auto auto;
+		padding: 0 10px;
+	}
+	#cv nav .nav {
+		height: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#cv .nav.show .line {
+		display: inline-block;
+		width: 50px;
+		height: 0;
+		border-top: solid 1px;
+		margin: auto;
+		animation: width ease 0.7s;
+	}
+	#cv .scrollicon {
+		grid-column: span 7;
+	}
+	.nav {
+		padding: 10px 0;
+	}
+	.nav.show {
+		font-size: 24px;
+		animation: fontsize ease 0.7s;
+	}
+	#projects .nav.show .line {
+		width: 0;
+		height: 100px;
+		border-left: solid 1px;
+		margin: auto;
+		animation: height ease 0.7s;
+	}
+	nav .scrollicon {
+		border: solid 1px;
+		border-radius: 10px;
+		width: 20px;
+		height: 30px;
+		padding: 2px;
+		position: relative;
+		margin: 5px auto;
+	}
+	nav .scrollicon div {
+		width: 12px;
+		height: 15px;
+		margin: auto;
+		border-radius: 10px;
+		position: absolute;
+		left: 3px;
+		animation: mouse ease 1.7s infinite;
+		background: white;
+	}
+	#cv nav .scrollicon {
+		border-color: gray;
+	}
+	#cv nav .scrollicon div {
+		background: gray;
+	}
+	.navNo {
+		cursor: pointer;
+	}
+	.control {
+		position: absolute;
+		bottom: 40%;
+		right: 5%;
+		z-index: 1;
+		perspective: 1000px;
+	}
+	.control .wrapper {
+		transform: rotateY(-30deg);
+		transition: all ease 0.7s;
+	}
+	.control:hover .wrapper {
+		transform: none;
+	}
+}
+@media (orientation: portrait), (max-width: 1000px) {
+	.vertical {
+		display: block;
+	}
+	.vertical.close {
+		position: absolute;
+		width: 64px;
+		height: 61px;
+		bottom: 0;
+		right: 0;
+		z-index: 5;
+		transform: scale(0.5);
+		cursor: pointer;
+	}
+	#projects .vertical.close {
+		background-image: url(../img/x-icon.png);
+	}
+	#cv .vertical.close {
+		background-image: url(../img/x-icon-black.png);
+	}
+	#cv.active, #projects.active {
+		width: 100%;
+	}
+	#cv .wrap {
+		width: calc(100vw + 20px);
+	}
+	#cv nav {
+		width: 100vw;
+	}
+	.slides {
+		width: calc(100vw + 20px);
+	}
+	@keyframes side {
+		0% {width: 0%;}
+		100% {width: 100%;}
+	}
+	@keyframes side-in {
+		0% {width: 100%;}
+		100% {width: 0%;}
+	}
+}
+@media (max-width: 767px), (max-height: 600px) {
+	.vertical {
+		display: none;
+	}
+	#head {
+		margin: auto;
+		height: 100vh;
+		background-repeat: no-repeat;
+		background-position: center;
+		line-height: 100vh;
+	}
+	#cv {
+	  padding: 50px 20px;
+	}
+	#cv .wrap {
+		width: 100%;
+	}
+	#cv .page {
+		padding: 10px 0;
+	}
+	.slides {
+		width: 100%;
+	}
+	.control {
+		width: 338px;
+		margin: 100px auto;
+	}
+	.control .wrapper {
+		position: relative;
+	}
+	#info {
+	  margin: 100px auto;
+	}
 }
