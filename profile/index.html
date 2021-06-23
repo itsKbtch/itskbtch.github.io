@@ -43,7 +43,7 @@
                 <h1>Career focus</h1>
                 <div class="content">
                   <p>
-                  As a senior IT student, I am eager to find a job in the IT world which is wide, and definitely diverse. I have been searching for the “right job” but I feel like there is no such thing. For all the jobs that I have been through, I find that it is not really about the work but more about how hard you willing to try and how much commitment you willing to make to one that will determine your successs.
+                  As a senior IT student, I am eager to find a job in the IT world which is wide, and definitely diverse. I have been searching for the “right job” but I feel like there is no such thing. For all the jobs that I have been through, I find that it is not really about the work but more about how hard you are willing to try and how much commitment you are willing to make to one that will determine your successs.
                   </p>
                 </div>
               </div>
@@ -62,7 +62,14 @@
                     <div class="timeline">06/2017 - now</div>
                     <div>
                       <strong>National University of Civil Engineering</strong><br>
-                      <span>Major: Information Technology</span>
+                      <span>Major: Information Technology</span><br>
+                      <span>GPA: 3.15</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="timeline">2017 – 2018</div>
+                    <div>
+                      <strong>Received a scholarship from for high achievements in the entrance exam</strong>
                     </div>
                   </div>
                   <div>
@@ -71,12 +78,18 @@
                       <strong>Completed short-term PHP training at ITPlus Academy</strong>
                     </div>
                   </div>
+                  <div>
+                    <div class="timeline">2019 – 2020</div>
+                    <div>
+                      <strong>Received Do Quoc Sam scholarship by National University of Civil Engineering for outstanding results in study and good practice</strong>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
         <div class="page no4">
               <div class="programing">
-                <h1>Programing</h1>
+                <h1>Programming</h1>
                 <div class="content">
                   <div class="langset frontend">
                     <h2>Front-end</h2>
@@ -85,6 +98,13 @@
                       <div id="css" class="chart"></div>
                       <div id="js" class="chart"></div>
                       <div id="jquery" class="chart"></div>
+                    </div>
+                  </div>
+                  <div class="langset others">
+                    <h2>Back-end</h2>
+                    <div>
+                      <div id="php" class="chart"></div>
+                      <div id="python" class="chart"></div>
                     </div>
                   </div>
                   <div class="langset others">
@@ -169,7 +189,7 @@
             </div>
             <div class="nav no4">
               <div class="line"></div>
-              <a class="navNo" no=4>Programing</a>
+              <a class="navNo" no=4>Programming</a>
               <div class="line"></div>
             </div>
             <div class="nav no5">
@@ -286,6 +306,8 @@
     google.charts.setOnLoadCallback(drawCSS);
     google.charts.setOnLoadCallback(drawJS);
     google.charts.setOnLoadCallback(drawCpp);
+    google.charts.setOnLoadCallback(drawPhp);
+    google.charts.setOnLoadCallback(drawPython);
     google.charts.setOnLoadCallback(drawEngListen);
     google.charts.setOnLoadCallback(drawEngSpeak);
     google.charts.setOnLoadCallback(drawEngRead);
@@ -390,6 +412,60 @@
       };
 
       var chart = new google.visualization.PieChart(document.getElementById('cpp'));
+      chart.draw(data, options);
+    }
+
+    function drawPhp() {
+      var data = google.visualization.arrayToDataTable([
+          ['PHP/Laravel', 'fluency'],
+          ['PHP', 40],
+          ['Laravel', 40],
+          ['', 20]
+      ]);
+
+      var options = {
+          pieHole: 0.8,
+          slices: {
+            0: { color: '#e6e6fa' },
+            1: { color: '#B7B7FF' },
+            2: { color: 'transparent' }
+          },
+          legend: 'none',
+          pieSliceTextStyle: {
+            color: 'black',
+            fontSize: 14
+          },
+          pieSliceText: 'label'
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('php'));
+      chart.draw(data, options);
+    }
+
+    function drawPython() {
+      var data = google.visualization.arrayToDataTable([
+          ['Python/Django', 'fluency'],
+          ['Python', 30],
+          ['Django', 30],
+          ['', 40]
+      ]);
+
+      var options = {
+          pieHole: 0.8,
+          slices: {
+            0: { color: '#e6e6fa' },
+            1: { color: '#B7B7FF' },
+            2: { color: 'transparent' }
+          },
+          legend: 'none',
+          pieSliceTextStyle: {
+            color: 'black',
+            fontSize: 14
+          },
+          pieSliceText: 'label'
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('python'));
       chart.draw(data, options);
     }
 
